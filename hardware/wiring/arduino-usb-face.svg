@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="832" viewBox="0 0 1200 832" role="img" aria-label="Arduino Uno / Nano por USB">
+  <title>Arduino Uno / Nano por USB</title>
+  <desc>La cara se conecta a la PC; el puente de Python pone la voz con el micrófono y los parlantes de la PC</desc>
+  <rect x="0" y="0" width="1200" height="832" fill="#ffffff"/>
+  <text x="32" y="44" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="700" fill="#1d2733" text-anchor="start">Arduino Uno / Nano por USB</text>
+  <text x="32" y="68" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#5b6b7b" text-anchor="start">La cara se conecta a la PC; el puente de Python pone la voz con el micrófono y los parlantes de la PC</text>
+  <rect x="197" y="306" width="190" height="136" rx="10" fill="#000000" opacity="0.06"/>
+  <rect x="194" y="302" width="190" height="136" rx="10" fill="#ffffff" stroke="#c9d1d9" stroke-width="1.2"/>
+  <rect x="194" y="302" width="190" height="6" rx="3" fill="#2563eb"/>
+  <text x="208" y="328" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#1d2733" text-anchor="start">OLED 0,96" I2C</text>
+  <text x="208" y="343" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="400" fill="#5b6b7b" text-anchor="start">SSD1306 o SH1106 128x64</text>
+  <rect x="379" y="357" width="10" height="10" rx="2" fill="#f5c542" stroke="#8a6d10" stroke-width="1"/>
+  <text x="372" y="365.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="10" font-weight="600" fill="#1d2733" text-anchor="end">VCC</text>
+  <rect x="379" y="379" width="10" height="10" rx="2" fill="#f5c542" stroke="#8a6d10" stroke-width="1"/>
+  <text x="372" y="387.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="10" font-weight="600" fill="#1d2733" text-anchor="end">GND</text>
+  <rect x="379" y="401" width="10" height="10" rx="2" fill="#f5c542" stroke="#8a6d10" stroke-width="1"/>
+  <text x="372" y="409.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="10" font-weight="600" fill="#1d2733" text-anchor="end">SCL</text>
+  <rect x="379" y="423" width="10" height="10" rx="2" fill="#f5c542" stroke="#8a6d10" stroke-width="1"/>
+  <text x="372" y="431.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="10" font-weight="600" fill="#1d2733" text-anchor="end">SDA</text>
+  <rect x="819" y="317" width="190" height="114" rx="10" fill="#000000" opacity="0.06"/>
+  <rect x="816" y="313" width="190" height="114" rx="10" fill="#ffffff" stroke="#c9d1d9" stroke-width="1.2"/>
+  <rect x="816" y="313" width="190" height="6" rx="3" fill="#64748b"/>
+  <text x="830" y="339" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#1d2733" text-anchor="start">Botones</text>
+  <text x="830" y="354" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="400" fill="#5b6b7b" text-anchor="start">Pulsadores a GND</text>
+  <rect x="811" y="368" width="10" height="10" rx="2" fill="#f5c542" stroke="#8a6d10" stroke-width="1"/>
+  <text x="828" y="376.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="10" font-weight="600" fill="#1d2733" text-anchor="start">Botón 1 HABLAR</text>
+  <rect x="811" y="390" width="10" height="10" rx="2" fill="#f5c542" stroke="#8a6d10" stroke-width="1"/>
+  <text x="828" y="398.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="10" font-weight="600" fill="#1d2733" text-anchor="start">Botón 2 CANCELAR</text>
+  <rect x="811" y="412" width="10" height="10" rx="2" fill="#f5c542" stroke="#8a6d10" stroke-width="1"/>
+  <text x="828" y="420.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="10" font-weight="600" fill="#1d2733" text-anchor="start">Común</text>
+  <rect x="470" y="118" width="280" height="516" rx="16" fill="#000000" opacity="0.08"/>
+  <rect x="466" y="112" width="280" height="516" rx="16" fill="#1f3b4d" stroke="#0f2533" stroke-width="1.5"/>
+  <text x="606" y="138" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">Arduino Uno / Nano</text>
+  <text x="606" y="156" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" fill="#a9c2cf" text-anchor="middle">ATmega328P (Nano: mismos pines)</text>
+  <rect x="554" y="310" width="104" height="120" rx="6" fill="#c9d3da" stroke="#8fa1ad" stroke-width="1"/>
+  <rect x="564" y="322" width="84" height="96" rx="4" fill="#e8edf0"/>
+  <text x="606" y="374" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="700" fill="#4a5a66" text-anchor="middle">ATmega328P</text>
+  <rect x="584" y="616" width="44" height="18" rx="4" fill="#9aa8b2" stroke="#6c7a84" stroke-width="1"/>
+  <text x="606" y="608" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="400" fill="#a9c2cf" text-anchor="middle">USB-B</text>
+  <rect x="474" y="176" width="12" height="12" rx="2" fill="#6b8191" stroke="#506473" stroke-width="1"/>
+  <circle cx="480" cy="182" r="2.6" fill="#3d4f5b"/>
+  <text x="492" y="185.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#a9c2cf" text-anchor="start">IOREF</text>
+  <rect x="474" y="198" width="12" height="12" rx="2" fill="#6b8191" stroke="#506473" stroke-width="1"/>
+  <circle cx="480" cy="204" r="2.6" fill="#3d4f5b"/>
+  <text x="492" y="207.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#a9c2cf" text-anchor="start">RESET</text>
+  <rect x="474" y="220" width="12" height="12" rx="2" fill="#6b8191" stroke="#506473" stroke-width="1"/>
+  <circle cx="480" cy="226" r="2.6" fill="#3d4f5b"/>
+  <text x="492" y="229.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#a9c2cf" text-anchor="start">3V3</text>
+  <rect x="474" y="242" width="12" height="12" rx="2" fill="#f5c542" stroke="#8a6d10" stroke-width="1"/>
+  <circle cx="480" cy="248" r="2.6" fill="#2b2b2b"/>
+  <text x="492" y="251.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="start">5V</text>
+  <rect x="474" y="264" width="12" height="12" rx="2" fill="#6b8191" stroke="#506473" stroke-width="1"/>
+  <circle cx="480" cy="270" r="2.6" fill="#3d4f5b"/>
+  <text x="492" y="273.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#a9c2cf" text-anchor="start">GND</text>
+  <rect x="474" y="286" width="12" height="12" rx="2" fill="#f5c542" stroke="#8a6d10" stroke-width="1"/>
+  <circle cx="480" cy="292" r="2.6" fill="#2b2b2b"/>
+  <text x="492" y="295.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="start">GND</text>
+  <rect x="474" y="308" width="12" height="12" rx="2" fill="#6b8191" stroke="#506473" stroke-width="1"/>
+  <circle cx="480" cy="314" r="2.6" fill="#3d4f5b"/>
+  <text x="492" y="317.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#a9c2cf" text-anchor="start">VIN</text>
+  <rect x="474" y="330" width="12" height="12" rx="2" fill="#6b8191" stroke="#506473" stroke-width="1"/>
+  <circle cx="480" cy="336" r="2.6" fill="#3d4f5b"/>
+  <text x="492" y="339.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#a9c2cf" text-anchor="start">A0</text>
+  <rect x="474" y="352" width="12" height="12" rx="2" fill="#6b8191" stroke="#506473" stroke-width="1"/>
+  <circle cx="480" cy="358" r="2.6" fill="#3d4f5b"/>
+  <text x="492" y="361.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#a9c2cf" text-anchor="start">A1</text>
+  <rect x="474" y="374" width="12" height="12" rx="2" fill="#6b8191" stroke="#506473" stroke-width="1"/>
+  <circle cx="480" cy="380" r="2.6" fill="#3d4f5b"/>
+  <text x="492" y="383.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#a9c2cf" text-anchor="start">A2</text>
+  <rect x="474" y="396" width="12" height="12" rx="2" fill="#6b8191" stroke="#506473" stroke-width="1"/>
+  <circle cx="480" cy="402" r="2.6" fill="#3d4f5b"/>
+  <text x="492" y="405.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#a9c2cf" text-anchor="start">A3</text>
+  <rect x="474" y="418" width="12" height="12" rx="2" fill="#f5c542" stroke="#8a6d10" stroke-width="1"/>
+  <circle cx="480" cy="424" r="2.6" fill="#2b2b2b"/>
+  <text x="492" y="427.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="start">A4/SDA</text>
+  <rect x="474" y="440" width="12" height="12" rx="2" fill="#f5c542" stroke="#8a6d10" stroke-width="1"/>
+  <circle cx="480" cy="446" r="2.6" fill="#2b2b2b"/>
+  <text x="492" y="449.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="start">A5/SCL</text>
+  <rect x="726" y="176" width="12" height="12" rx="2" fill="#6b8191" stroke="#506473" stroke-width="1"/>
+  <circle cx="732" cy="182" r="2.6" fill="#3d4f5b"/>
+  <text x="720" y="185.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#a9c2cf" text-anchor="end">D0</text>
+  <rect x="726" y="198" width="12" height="12" rx="2" fill="#6b8191" stroke="#506473" stroke-width="1"/>
+  <circle cx="732" cy="204" r="2.6" fill="#3d4f5b"/>
+  <text x="720" y="207.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#a9c2cf" text-anchor="end">D1</text>
+  <rect x="726" y="220" width="12" height="12" rx="2" fill="#f5c542" stroke="#8a6d10" stroke-width="1"/>
+  <circle cx="732" cy="226" r="2.6" fill="#2b2b2b"/>
+  <text x="720" y="229.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="end">D2</text>
+  <rect x="726" y="242" width="12" height="12" rx="2" fill="#f5c542" stroke="#8a6d10" stroke-width="1"/>
+  <circle cx="732" cy="248" r="2.6" fill="#2b2b2b"/>
+  <text x="720" y="251.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="end">D3</text>
+  <rect x="726" y="264" width="12" height="12" rx="2" fill="#6b8191" stroke="#506473" stroke-width="1"/>
+  <circle cx="732" cy="270" r="2.6" fill="#3d4f5b"/>
+  <text x="720" y="273.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#a9c2cf" text-anchor="end">D4</text>
+  <rect x="726" y="286" width="12" height="12" rx="2" fill="#6b8191" stroke="#506473" stroke-width="1"/>
+  <circle cx="732" cy="292" r="2.6" fill="#3d4f5b"/>
+  <text x="720" y="295.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#a9c2cf" text-anchor="end">D5</text>
+  <rect x="726" y="308" width="12" height="12" rx="2" fill="#6b8191" stroke="#506473" stroke-width="1"/>
+  <circle cx="732" cy="314" r="2.6" fill="#3d4f5b"/>
+  <text x="720" y="317.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#a9c2cf" text-anchor="end">D6</text>
+  <rect x="726" y="330" width="12" height="12" rx="2" fill="#6b8191" stroke="#506473" stroke-width="1"/>
+  <circle cx="732" cy="336" r="2.6" fill="#3d4f5b"/>
+  <text x="720" y="339.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#a9c2cf" text-anchor="end">D7</text>
+  <rect x="726" y="352" width="12" height="12" rx="2" fill="#6b8191" stroke="#506473" stroke-width="1"/>
+  <circle cx="732" cy="358" r="2.6" fill="#3d4f5b"/>
+  <text x="720" y="361.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#a9c2cf" text-anchor="end">D8</text>
+  <rect x="726" y="374" width="12" height="12" rx="2" fill="#6b8191" stroke="#506473" stroke-width="1"/>
+  <circle cx="732" cy="380" r="2.6" fill="#3d4f5b"/>
+  <text x="720" y="383.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#a9c2cf" text-anchor="end">D9</text>
+  <rect x="726" y="396" width="12" height="12" rx="2" fill="#6b8191" stroke="#506473" stroke-width="1"/>
+  <circle cx="732" cy="402" r="2.6" fill="#3d4f5b"/>
+  <text x="720" y="405.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#a9c2cf" text-anchor="end">D10</text>
+  <rect x="726" y="418" width="12" height="12" rx="2" fill="#6b8191" stroke="#506473" stroke-width="1"/>
+  <circle cx="732" cy="424" r="2.6" fill="#3d4f5b"/>
+  <text x="720" y="427.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#a9c2cf" text-anchor="end">D11</text>
+  <rect x="726" y="440" width="12" height="12" rx="2" fill="#6b8191" stroke="#506473" stroke-width="1"/>
+  <circle cx="732" cy="446" r="2.6" fill="#3d4f5b"/>
+  <text x="720" y="449.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#a9c2cf" text-anchor="end">D12</text>
+  <rect x="726" y="462" width="12" height="12" rx="2" fill="#6b8191" stroke="#506473" stroke-width="1"/>
+  <circle cx="732" cy="468" r="2.6" fill="#3d4f5b"/>
+  <text x="720" y="471.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#a9c2cf" text-anchor="end">D13</text>
+  <rect x="726" y="484" width="12" height="12" rx="2" fill="#f5c542" stroke="#8a6d10" stroke-width="1"/>
+  <circle cx="732" cy="490" r="2.6" fill="#2b2b2b"/>
+  <text x="720" y="493.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="end">GND</text>
+  <rect x="726" y="506" width="12" height="12" rx="2" fill="#6b8191" stroke="#506473" stroke-width="1"/>
+  <circle cx="732" cy="512" r="2.6" fill="#3d4f5b"/>
+  <text x="720" y="515.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#a9c2cf" text-anchor="end">AREF</text>
+  <rect x="726" y="528" width="12" height="12" rx="2" fill="#6b8191" stroke="#506473" stroke-width="1"/>
+  <circle cx="732" cy="534" r="2.6" fill="#3d4f5b"/>
+  <text x="720" y="537.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#a9c2cf" text-anchor="end">SDA</text>
+  <rect x="726" y="550" width="12" height="12" rx="2" fill="#6b8191" stroke="#506473" stroke-width="1"/>
+  <circle cx="732" cy="556" r="2.6" fill="#3d4f5b"/>
+  <text x="720" y="559.5" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="400" fill="#a9c2cf" text-anchor="end">SCL</text>
+  <line x1="418" y1="248" x2="418" y2="362" fill="none" stroke="#d64545" stroke-width="2.6" stroke-linecap="round" />
+  <line x1="405" y1="292" x2="405" y2="384" fill="none" stroke="#1d2733" stroke-width="2.6" stroke-linecap="round" />
+  <line x1="444" y1="406" x2="444" y2="446" fill="none" stroke="#b7791f" stroke-width="2.6" stroke-linecap="round" />
+  <line x1="431" y1="424" x2="431" y2="428" fill="none" stroke="#2563eb" stroke-width="2.6" stroke-linecap="round" />
+  <line x1="768" y1="226" x2="768" y2="373" fill="none" stroke="#0ca678" stroke-width="2.6" stroke-linecap="round" />
+  <line x1="781" y1="248" x2="781" y2="395" fill="none" stroke="#0ca678" stroke-width="2.6" stroke-linecap="round" />
+  <line x1="794" y1="417" x2="794" y2="490" fill="none" stroke="#1d2733" stroke-width="2.6" stroke-linecap="round" />
+  <path d="M486.0,248.0 L418.0,248.0" fill="none" stroke="#d64545" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M418.0,362.0 L410.0,362.0 A5.0,5.0 0 0 0 400.0,362.0 L389.0,362.0" fill="none" stroke="#d64545" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M486.0,292.0 L423.0,292.0 A5.0,5.0 0 0 0 413.0,292.0 L405.0,292.0" fill="none" stroke="#1d2733" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M405.0,384.0 L389.0,384.0" fill="none" stroke="#1d2733" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M486.0,446.0 L444.0,446.0" fill="none" stroke="#b7791f" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M444.0,406.0 L389.0,406.0" fill="none" stroke="#b7791f" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M486.0,424.0 L449.0,424.0 A5.0,5.0 0 0 0 439.0,424.0 L431.0,424.0" fill="none" stroke="#2563eb" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M431.0,428.0 L389.0,428.0" fill="none" stroke="#2563eb" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M726.0,226.0 L768.0,226.0" fill="none" stroke="#0ca678" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M768.0,373.0 L776.0,373.0 A5.0,5.0 0 0 1 786.0,373.0 L811.0,373.0" fill="none" stroke="#0ca678" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M726.0,248.0 L763.0,248.0 A5.0,5.0 0 0 1 773.0,248.0 L781.0,248.0" fill="none" stroke="#0ca678" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M781.0,395.0 L811.0,395.0" fill="none" stroke="#0ca678" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M726.0,490.0 L794.0,490.0" fill="none" stroke="#1d2733" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M794.0,417.0 L811.0,417.0" fill="none" stroke="#1d2733" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="40" y="690" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#1d2733" text-anchor="start">Colores</text>
+  <line x1="110" y1="686" x2="132" y2="686" fill="none" stroke="#d64545" stroke-width="4" stroke-linecap="round" />
+  <text x="140" y="690" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#1d2733" text-anchor="start">5 V</text>
+  <line x1="181.8" y1="686" x2="203.8" y2="686" fill="none" stroke="#1d2733" stroke-width="4" stroke-linecap="round" />
+  <text x="211.8" y="690" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#1d2733" text-anchor="start">GND</text>
+  <line x1="253.6" y1="686" x2="275.6" y2="686" fill="none" stroke="#b7791f" stroke-width="4" stroke-linecap="round" />
+  <text x="283.6" y="690" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#1d2733" text-anchor="start">I2C SCL</text>
+  <line x1="351.8" y1="686" x2="373.8" y2="686" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" />
+  <text x="381.8" y="690" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#1d2733" text-anchor="start">I2C SDA</text>
+  <line x1="450" y1="686" x2="472" y2="686" fill="none" stroke="#0ca678" stroke-width="4" stroke-linecap="round" />
+  <text x="480" y="690" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#1d2733" text-anchor="start">Datos LED</text>
+  <circle cx="46" cy="722" r="2.5" fill="#0b7285"/>
+  <text x="56" y="726" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1d2733" text-anchor="start">Los módulos OLED comunes aceptan 5 V (tienen regulador). Si el tuyo dice 3,3 V, usa 3V3.</text>
+  <circle cx="46" cy="744" r="2.5" fill="#0b7285"/>
+  <text x="56" y="748" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1d2733" text-anchor="start">En el Nano los pines son los mismos: A4 = SDA, A5 = SCL, D2 y D3.</text>
+  <line x1="32" y1="798" x2="1168" y2="798" fill="none" stroke="#c9d1d9" stroke-width="1" stroke-linecap="round" />
+  <text x="32" y="818" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#5b6b7b" text-anchor="start">Generado por tools/diagrams/wiring.py  |  hardware/wiring/arduino-usb-face.md</text>
+  <text x="1168" y="818" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#5b6b7b" text-anchor="end">G-Mini Home  |  CC BY-SA 4.0</text>
+</svg>
