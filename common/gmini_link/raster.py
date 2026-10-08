@@ -94,19 +94,23 @@ class BitmapCanvas:
             self._span(min(x0, x1, x2), max(x0, x1, x2), y0, color)
             return
 
-        def lerp(xa: int, ya: int, xb: int, yb: int, y: int) -> int:
-            # Division entera truncada hacia cero, igual que en C++.
-            return xa + int((xb - xa) * (y - ya) / (yb - ya))
+        def slope(xa: int, ya: int, xb: int, yb: int) -> int:
+            # Punto fijo 16.16 con division truncada hacia cero, igual que el firmware.
+            if yb == ya:
+                return 0
+            num = (xb - xa) * 65536
+            q = abs(num) // abs(yb - ya)
+            return q if (num >= 0) == (yb - ya > 0) else -q
 
-        for y in range(max(y0, 0), min(y2, self.height - 1) + 1):
-            xa = lerp(x0, y0, x2, y2, y)
-            if y < y1:
-                xb = lerp(x0, y0, x1, y1, y)
-            elif y2 != y1:
-                xb = lerp(x1, y1, x2, y2, y)
-            else:
-                xb = x1
-            self._span(xa, xb, y, color)
+        s02, s01, s12 = slope(x0, y0, x2, y2), slope(x0, y0, x1, y1), slope(x1, y1, x2, y2)
+        xa = xb = x0 * 65536 + 32768
+        for y in range(y0, min(y2, self.height - 1) + 1):
+            if y == y1:
+                xb = x1 * 65536 + 32768
+            if y >= 0:
+                self._span(xa >> 16, xb >> 16, y, color)
+            xa += s02
+            xb += s01 if y < y1 else s12
 
     # ------------------------------------------------------------ exportar
 

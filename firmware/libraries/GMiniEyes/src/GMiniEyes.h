@@ -107,10 +107,10 @@ class EyesEngine {
   float level() const { return level_; }
 
  private:
-  struct Shape {
-    float w, h, r, gap, dy;
-    float lidTop, slantIn, slantOut, lidBottom;
-    float lookX, lookY, scaleL, scaleR;
+  // Geometria animable. El orden coincide con los primeros 13 campos de
+  // EmotionPreset, asi los presets se copian de un bloque (menos flash en AVR).
+  enum ShapeField : uint8_t {
+    kW, kH, kR, kGap, kDy, kLidTop, kSlantIn, kSlantOut, kLidBottom, kLookX, kLookY, kScaleL, kScaleR, kShapeFields
   };
 
   void applyPresets(bool immediate);
@@ -122,8 +122,8 @@ class EyesEngine {
   uint32_t randRange(uint32_t lo, uint32_t hi);
   float randSigned();
 
-  Shape target_;
-  Shape cur_;
+  float target_[kShapeFields];
+  float cur_[kShapeFields];
 
   // Comportamiento derivado de los presets activos.
   float bounce_, shake_, pulse_, pulseHz_, levelH_;

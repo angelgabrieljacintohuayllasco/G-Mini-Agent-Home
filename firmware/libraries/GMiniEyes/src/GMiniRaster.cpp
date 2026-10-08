@@ -89,22 +89,18 @@ void SpanCanvas::fillTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1, in
     clippedSpan(min16(x0, min16(x1, x2)), max16(x0, max16(x1, x2)), y0, color);
     return;
   }
-  const int32_t dx02 = x2 - x0, dy02 = y2 - y0;
-  const int32_t dx01 = x1 - x0, dy01 = y1 - y0;
-  const int32_t dx12 = x2 - x1, dy12 = y2 - y1;
-  int16_t yStart = max16(y0, clipTop_);
-  int16_t yEnd = min16(y2, clipBottom_);
-  for (int16_t y = yStart; y <= yEnd; ++y) {
-    int16_t xa = (int16_t)(x0 + dx02 * (y - y0) / dy02);
-    int16_t xb;
-    if (y < y1) {
-      xb = (int16_t)(x0 + dx01 * (y - y0) / dy01);
-    } else if (dy12 != 0) {
-      xb = (int16_t)(x1 + dx12 * (y - y1) / dy12);
-    } else {
-      xb = x1;
-    }
-    clippedSpan(xa, xb, y, color);
+  // Bordes en punto fijo 16.16: tres divisiones por triangulo en vez de dos
+  // por fila (en AVR la division de 32 bits es cara en tiempo y en flash).
+  const int32_t s02 = (int32_t)(x2 - x0) * 65536L / (y2 - y0);
+  const int32_t s01 = y1 != y0 ? (int32_t)(x1 - x0) * 65536L / (y1 - y0) : 0;
+  const int32_t s12 = y2 != y1 ? (int32_t)(x2 - x1) * 65536L / (y2 - y1) : 0;
+  int32_t xa = (int32_t)x0 * 65536L + 32768L;
+  int32_t xb = xa;
+  for (int16_t y = y0; y <= y2 && y <= clipBottom_; ++y) {
+    if (y == y1) xb = (int32_t)x1 * 65536L + 32768L;
+    if (y >= clipTop_) clippedSpan((int16_t)(xa >> 16), (int16_t)(xb >> 16), y, color);
+    xa += s02;
+    xb += y < y1 ? s01 : s12;
   }
 }
 

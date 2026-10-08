@@ -1,6 +1,5 @@
 #include "GMiniSerialProto.h"
 
-#include <stdlib.h>
 #include <string.h>
 
 namespace gmini {
@@ -14,12 +13,20 @@ char* trim(char* s) {
   return s;
 }
 
-// Entero con signo en [lo, hi]; false si no es un numero completo.
-bool parseInt(const char* s, long lo, long hi, long* out) {
+// Entero con signo en [lo, hi]; false si no es un numero completo. Se evita
+// strtol(): en AVR ocupa ~500 bytes de flash.
+bool parseInt(const char* s, int16_t lo, int16_t hi, int16_t* out) {
   if (s == nullptr || *s == '\0') return false;
-  char* end = nullptr;
-  long v = strtol(s, &end, 10);
-  if (end == s || *end != '\0' || v < lo || v > hi) return false;
+  bool negative = false;
+  if (*s == '-' || *s == '+') negative = *s++ == '-';
+  if (*s == '\0') return false;
+  int16_t v = 0;
+  for (; *s; ++s) {
+    if (*s < '0' || *s > '9' || v > 3000) return false;
+    v = (int16_t)(v * 10 + (*s - '0'));
+  }
+  if (negative) v = (int16_t)-v;
+  if (v < lo || v > hi) return false;
   *out = v;
   return true;
 }
@@ -99,7 +106,7 @@ SerialError parseSerialLine(char* line, SerialCommand* out) {
       return SerialError::None;
     }
     case 'L': {
-      long v;
+      int16_t v;
       if (!parseInt(trim(arg), 0, 9, &v)) return SerialError::Value;
       out->cmd = SerialCmd::Level;
       out->value = (uint8_t)v;
@@ -114,7 +121,7 @@ SerialError parseSerialLine(char* line, SerialCommand* out) {
       char* comma = strchr(a, ',');
       if (comma == nullptr) return SerialError::Value;
       *comma = '\0';
-      long x, y;
+      int16_t x, y;
       if (!parseInt(trim(a), -100, 100, &x) || !parseInt(trim(comma + 1), -100, 100, &y)) return SerialError::Value;
       out->cmd = SerialCmd::Look;
       out->lookX = (int8_t)x;
@@ -122,13 +129,13 @@ SerialError parseSerialLine(char* line, SerialCommand* out) {
       return SerialError::None;
     }
     case 'Z': {
-      long v;
+      int16_t v;
       if (!parseInt(trim(arg), 0, 1, &v)) return SerialError::Value;
       out->cmd = v ? SerialCmd::Sleep : SerialCmd::Wake;
       return SerialError::None;
     }
     case 'C': {
-      long v;
+      int16_t v;
       if (!parseInt(trim(arg), 0, 255, &v)) return SerialError::Value;
       out->cmd = SerialCmd::Contrast;
       out->value = (uint8_t)v;

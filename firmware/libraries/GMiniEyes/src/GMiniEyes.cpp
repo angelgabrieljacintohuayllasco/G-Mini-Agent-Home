@@ -1,9 +1,13 @@
 #include "GMiniEyes.h"
 
 #include <math.h>
+#include <stddef.h>
 #include <string.h>
 
 namespace gmini {
+
+static_assert(offsetof(EmotionPreset, scaleR) == 12 * sizeof(float),
+              "EmotionPreset debe empezar con los 13 campos de forma en orden");
 
 namespace {
 
@@ -21,9 +25,16 @@ inline float minf(float a, float b) { return a < b ? a : b; }
 // Comparacion robusta ante el desborde de millis() (cada ~49 dias).
 inline bool reached(uint32_t now, uint32_t deadline) { return (int32_t)(now - deadline) >= 0; }
 
-// Factor de suavizado exponencial para un paso dt con constante de tiempo tau.
-inline float smoothing(float dtMs, float tauMs) {
-  return tauMs <= 0.0f ? 1.0f : 1.0f - expf(-dtMs / tauMs);
+// Factor de suavizado para un paso dt con constante de tiempo tau. Es la
+// aproximacion racional de 1 - exp(-dt/tau): misma curva a efectos visuales y
+// sin arrastrar expf() al binario de AVR.
+inline float smoothing(float dtMs, float tauMs) { return tauMs <= 0.0f ? 1.0f : dtMs / (tauMs + dtMs); }
+
+// Seno aproximado (error maximo ~0,1 %), mucho mas liviano que sinf() en AVR.
+float fastSin(float x) {
+  x -= kTwoPi * floorf((x + kPi) / kTwoPi);
+  const float y = 1.27323954f * x - 0.405284735f * x * fabsf(x);
+  return 0.225f * (y * fabsf(y) - y) + y;
 }
 
 inline char lowerAscii(char c) { return (c >= 'A' && c <= 'Z') ? (char)(c - 'A' + 'a') : c; }
@@ -240,22 +251,20 @@ void drawFace(const FaceFrame& f, FaceCanvas& c, const FaceLayout& layout) {
 
 // ------------------------------------------------------------------ motor
 
-EyesEngine::EyesEngine(uint32_t seed)
-    : bounce_(0), shake_(0), pulse_(0), pulseHz_(1), levelH_(0),
-      actLookX_(0), actLookY_(0), scanX_(0), scanY_(0),
-      blinkMin_(0), blinkMax_(0), sacMin_(0), sacMax_(0), scanMin_(0), scanMax_(0),
-      shape_(kShapeRound), pendingShape_(kShapeRound),
-      hasLook_(false), mouth_(false), accent_(false), hasPendingShape_(false),
-      gazeX_(0), gazeY_(0), sacX_(0), sacY_(0), manualX_(0), manualY_(0),
-      level_(0), levelTarget_(0), sleepClosure_(0), phase_(0),
-      lastMs_(0), nextBlinkMs_(0), nextSaccadeMs_(0), blinkStartMs_(0), emotionSinceMs_(0), lastWakeMs_(0),
-      sleepAfterMs_(presets::kSleepAfterMs), rng_(seed ? seed : 0x2545F491u), scanSign_(1),
-      started_(false), blinking_(false), forceBlink_(false), manualLook_(false), asleep_(false),
-      autoBlink_(true), saccades_(true),
-      emotion_(Emotion::Neutral), activity_(Activity::Idle) {
-  memset(&frame_, 0, sizeof(frame_));
+EyesEngine::EyesEngine(uint32_t seed) {
+  // Todo el estado es de tipos simples: se pone a cero de una vez (en AVR la
+  // lista de inicializacion campo a campo ocupa cientos de bytes de flash).
+  memset(static_cast<void*>(this), 0, sizeof(*this));
+  emotion_ = Emotion::Neutral;
+  activity_ = Activity::Idle;
+  shape_ = pendingShape_ = kShapeRound;
+  sleepAfterMs_ = presets::kSleepAfterMs;
+  rng_ = seed ? seed : 0x2545F491u;
+  scanSign_ = 1;
+  autoBlink_ = true;
+  saccades_ = true;
   applyPresets(true);
-  cur_ = target_;
+  memcpy(cur_, target_, sizeof(cur_));
 }
 
 uint32_t EyesEngine::randRange(uint32_t lo, uint32_t hi) {
@@ -286,19 +295,11 @@ void EyesEngine::applyPresets(bool immediate) {
   GMINI_MEMCPY_P(&e, &presets::kEmotions[(uint8_t)emotion_], sizeof(e));
   GMINI_MEMCPY_P(&a, &presets::kActivities[(uint8_t)activity_], sizeof(a));
 
-  target_.w = e.w * a.mulW;
-  target_.h = e.h * a.mulH;
-  target_.r = e.r;
-  target_.gap = e.gap;
-  target_.dy = e.dy + a.addDy;
-  target_.lidTop = maxf(e.lidTop, a.lidTopMin);
-  target_.slantIn = e.slantIn;
-  target_.slantOut = e.slantOut;
-  target_.lidBottom = e.lidBottom;
-  target_.lookX = e.lookX;
-  target_.lookY = e.lookY;
-  target_.scaleL = e.scaleL;
-  target_.scaleR = e.scaleR;
+  memcpy(target_, &e, sizeof(target_));
+  target_[kW] *= a.mulW;
+  target_[kH] *= a.mulH;
+  target_[kDy] += a.addDy;
+  target_[kLidTop] = maxf(target_[kLidTop], a.lidTopMin);
 
   bounce_ = e.bounce;
   shake_ = e.shake;
@@ -440,8 +441,8 @@ void EyesEngine::updateGaze(uint32_t now, float k) {
       }
       nextSaccadeMs_ = now + randRange(sacMin_, sacMax_);
     }
-    tx = clampf(cur_.lookX + sacX_, -1.0f, 1.0f);
-    ty = clampf(cur_.lookY + sacY_, -1.0f, 1.0f);
+    tx = clampf(cur_[kLookX] + sacX_, -1.0f, 1.0f);
+    ty = clampf(cur_[kLookY] + sacY_, -1.0f, 1.0f);
   }
   gazeX_ += (tx - gazeX_) * k;
   gazeY_ += (ty - gazeY_) * k;
@@ -458,19 +459,7 @@ void EyesEngine::update(uint32_t nowMs) {
   }
 
   const float ks = smoothing(dt, (float)presets::kShapeTauMs);
-  cur_.w += (target_.w - cur_.w) * ks;
-  cur_.h += (target_.h - cur_.h) * ks;
-  cur_.r += (target_.r - cur_.r) * ks;
-  cur_.gap += (target_.gap - cur_.gap) * ks;
-  cur_.dy += (target_.dy - cur_.dy) * ks;
-  cur_.lidTop += (target_.lidTop - cur_.lidTop) * ks;
-  cur_.slantIn += (target_.slantIn - cur_.slantIn) * ks;
-  cur_.slantOut += (target_.slantOut - cur_.slantOut) * ks;
-  cur_.lidBottom += (target_.lidBottom - cur_.lidBottom) * ks;
-  cur_.lookX += (target_.lookX - cur_.lookX) * ks;
-  cur_.lookY += (target_.lookY - cur_.lookY) * ks;
-  cur_.scaleL += (target_.scaleL - cur_.scaleL) * ks;
-  cur_.scaleR += (target_.scaleR - cur_.scaleR) * ks;
+  for (uint8_t i = 0; i < kShapeFields; ++i) cur_[i] += (target_[i] - cur_[i]) * ks;
 
   const float tauLevel = levelTarget_ > level_ ? (float)presets::kLevelAttackMs : (float)presets::kLevelReleaseMs;
   level_ += (levelTarget_ - level_) * smoothing(dt, tauLevel);
@@ -495,30 +484,30 @@ void EyesEngine::update(uint32_t nowMs) {
 }
 
 void EyesEngine::buildFrame(uint32_t now, float blink) {
-  const float bounceOff = -bounce_ * fabsf(sinf(kPi * kBounceHz * phase_));
+  const float bounceOff = -bounce_ * fabsf(fastSin(kPi * kBounceHz * phase_));
   float shakeEnv = 0.0f;
   const uint32_t sinceEmotion = now - emotionSinceMs_;
   if (shake_ > 0.0f && sinceEmotion < presets::kShakeMs) {
     shakeEnv = 1.0f - (float)sinceEmotion / (float)presets::kShakeMs;
   }
-  const float shakeOff = shake_ * shakeEnv * sinf(kTwoPi * kShakeHz * phase_);
-  const float pulseMul = 1.0f + pulse_ * sinf(kTwoPi * pulseHz_ * phase_);
-  const float breath = sleepClosure_ * 0.8f * sinf(kTwoPi * kBreathHz * phase_);
+  const float shakeOff = shake_ * shakeEnv * fastSin(kTwoPi * kShakeHz * phase_);
+  const float pulseMul = 1.0f + pulse_ * fastSin(kTwoPi * pulseHz_ * phase_);
+  const float breath = sleepClosure_ * 0.8f * fastSin(kTwoPi * kBreathHz * phase_);
 
-  const float w = cur_.w * pulseMul;
-  const float h = cur_.h * pulseMul * (1.0f + levelH_ * level_);
-  const float gap = cur_.gap;
+  const float w = cur_[kW] * pulseMul;
+  const float h = cur_[kH] * pulseMul * (1.0f + levelH_ * level_);
+  const float gap = cur_[kGap];
   const float maxDx = maxf(0.0f, (presets::kRefWidth - (2.0f * w + gap)) * 0.5f - 2.0f);
   const float maxDy = maxf(0.0f, (presets::kRefHeight - h) * 0.5f - 2.0f);
   const float cx = presets::kRefWidth * 0.5f + gazeX_ * maxDx + shakeOff;
-  const float cy = presets::kRefHeight * 0.5f + gazeY_ * maxDy + cur_.dy + bounceOff + breath;
+  const float cy = presets::kRefHeight * 0.5f + gazeY_ * maxDy + cur_[kDy] + bounceOff + breath;
   // El ojo hacia el que se mira crece un poco: da sensacion de profundidad.
   const float curious = 0.08f * gazeX_;
   const float closure = maxf(blink, sleepClosure_ * 0.93f);
 
   for (uint8_t i = 0; i < 2; ++i) {
     const float side = i == 0 ? -1.0f : 1.0f;
-    const float scale = i == 0 ? cur_.scaleL * (1.0f - curious) : cur_.scaleR * (1.0f + curious);
+    const float scale = i == 0 ? cur_[kScaleL] * (1.0f - curious) : cur_[kScaleR] * (1.0f + curious);
     const float eyeH = h * scale;
     const float vis = maxf(2.0f, eyeH * (1.0f - closure));
     EyeGeom& g = frame_.eye[i];
@@ -526,11 +515,11 @@ void EyesEngine::buildFrame(uint32_t now, float blink) {
     g.cy = cy;
     g.w = w;
     g.h = vis;
-    g.r = minf(cur_.r, minf(w, vis) * 0.5f);
-    g.lidTop = cur_.lidTop;
-    g.slantIn = cur_.slantIn;
-    g.slantOut = cur_.slantOut;
-    g.lidBottom = cur_.lidBottom;
+    g.r = minf(cur_[kR], minf(w, vis) * 0.5f);
+    g.lidTop = cur_[kLidTop];
+    g.slantIn = cur_[kSlantIn];
+    g.slantOut = cur_[kSlantOut];
+    g.lidBottom = cur_[kLidBottom];
   }
   frame_.shape = shape_;
   frame_.accent = accent_;

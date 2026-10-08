@@ -51,7 +51,15 @@ def parse_activity(name: str | None) -> str | None:
 
 
 def _smoothing(dt_ms: float, tau_ms: float) -> float:
-    return 1.0 if tau_ms <= 0 else 1.0 - math.exp(-dt_ms / tau_ms)
+    # Aproximacion racional de 1 - exp(-dt/tau), igual que el firmware.
+    return 1.0 if tau_ms <= 0 else dt_ms / (tau_ms + dt_ms)
+
+
+def _fast_sin(x: float) -> float:
+    """Seno aproximado identico al del firmware (error maximo ~0,1 %)."""
+    x -= 2 * math.pi * math.floor((x + math.pi) / (2 * math.pi))
+    y = 1.27323954 * x - 0.405284735 * x * abs(x)
+    return 0.225 * (y * abs(y) - y) + y
 
 
 def _clamp(v: float, lo: float, hi: float) -> float:
@@ -386,14 +394,14 @@ class EyesEngine:
 
     def _build_frame(self, now: int, blink: float) -> None:
         cur = self._cur
-        bounce_off = -self._bounce * abs(math.sin(math.pi * _BOUNCE_HZ * self._phase))
+        bounce_off = -self._bounce * abs(_fast_sin(math.pi * _BOUNCE_HZ * self._phase))
         shake_env = 0.0
         since = now - self._emotion_since_ms
         if self._shake > 0 and since < presets.TIMING["shake_ms"]:
             shake_env = 1.0 - since / presets.TIMING["shake_ms"]
-        shake_off = self._shake * shake_env * math.sin(2 * math.pi * _SHAKE_HZ * self._phase)
-        pulse_mul = 1.0 + self._pulse * math.sin(2 * math.pi * self._pulse_hz * self._phase)
-        breath = self._sleep_closure * 0.8 * math.sin(2 * math.pi * _BREATH_HZ * self._phase)
+        shake_off = self._shake * shake_env * _fast_sin(2 * math.pi * _SHAKE_HZ * self._phase)
+        pulse_mul = 1.0 + self._pulse * _fast_sin(2 * math.pi * self._pulse_hz * self._phase)
+        breath = self._sleep_closure * 0.8 * _fast_sin(2 * math.pi * _BREATH_HZ * self._phase)
 
         w = cur.w * pulse_mul
         h = cur.h * pulse_mul * (1.0 + self._level_h * self._level)
