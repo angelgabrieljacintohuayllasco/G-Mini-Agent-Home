@@ -21,5 +21,6 @@ ignore = ["RUF001", "RUF002", "RUF003", "SIM105", "B008"]
 "tests/*" = ["B011"]
 "tools/diagrams/*.py" = ["E501"]  # textos descriptivos de los esquemas
 "tools/templates/*.py" = ["E501"]
+"tools/render_enclosures.py" = ["E501"]
 "bridge/gmini_serial_bridge.py" = ["E402", "I001"]
 "raspberry-pi/gmini_pi/__main__.py" = ["E402", "I001"]

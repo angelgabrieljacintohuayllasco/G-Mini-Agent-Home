@@ -120,16 +120,19 @@ def test_pygame_renderer_smoke(tmp_path) -> None:
     from gmini_pi.config import DisplayConfig
     from gmini_pi.renderer import FaceRenderer
 
-    for layout in ("normal", "mirror", "pyramid"):
+    for layout, invert in (("normal", False), ("mirror", False), ("pyramid", False), ("normal", True)):
         model = FaceModel(seed=4)
         model.set_emotion("happy")
         model.set_caption("Prueba de subtítulos con tildes: ñandú", None)
         renderer = FaceRenderer(DisplayConfig(fullscreen=False, width=480, height=320, layout=layout,
-                                              supersample=2), model)
+                                              supersample=2, invert=invert), model)
         for t in range(0, 1600, 40):
             renderer.render(t)
         surface = renderer.screen
         lit = sum(1 for x in range(0, 480, 4) for y in range(0, 320, 4) if surface.get_at((x, y))[1] > 120)
-        assert lit > 50, layout
-        pygame.image.save(surface, str(tmp_path / f"face-{layout}.png"))
+        if invert:
+            assert surface.get_at((2, 2))[:3] == (255, 255, 255)  # el fondo negro pasa a blanco
+        else:
+            assert lit > 50, layout
+        pygame.image.save(surface, str(tmp_path / f"face-{layout}-{invert}.png"))
         renderer.close()

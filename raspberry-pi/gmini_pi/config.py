@@ -38,6 +38,7 @@ class DisplayConfig:
     supersample: int = 1
     captions: bool = True
     hide_cursor: bool = True
+    invert: bool = False  # LCD transparente: lo negro queda opaco y lo blanco transparente
 
 
 @dataclass

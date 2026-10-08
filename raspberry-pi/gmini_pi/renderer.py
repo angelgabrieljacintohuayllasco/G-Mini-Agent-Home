@@ -179,6 +179,11 @@ class FaceRenderer:
                     block = pg.transform.flip(block, True, False)
                 screen.blit(block, box.topleft)
 
+        if self.config.invert:
+            inverted = pg.Surface((width, height))
+            inverted.fill((255, 255, 255))
+            inverted.blit(screen, (0, 0), special_flags=pg.BLEND_RGB_SUB)
+            screen.blit(inverted, (0, 0))
         if self.config.rotate:
             rotated = pg.transform.rotate(screen.copy(), -self.config.rotate)
             screen.fill(PALETTE[COLOR_BACKGROUND])

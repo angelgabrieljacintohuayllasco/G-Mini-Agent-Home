@@ -16,6 +16,7 @@ rotate = 0           # 0, 90, 180 o 270 (pantallas montadas de costado)
 supersample = 1      # 2 = bordes suaves; cuesta CPU (no usar en Pi Zero)
 captions = true
 hide_cursor = true
+invert = false       # true para un LCD transparente (ojos oscuros sobre fondo claro)
 
 [audio]
 enabled = true

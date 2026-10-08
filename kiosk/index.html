@@ -20,7 +20,7 @@
   <script src="face.js"></script>
   <script>
     "use strict";
-    // Parametros: ?layout=normal|mirror|pyramid  ?demo=1
+    // Parametros: ?layout=normal|mirror|pyramid  ?demo=1  ?invert=1 (LCD transparente)
     const params = new URLSearchParams(location.search);
     const layout = ["mirror", "pyramid"].includes(params.get("layout")) ? params.get("layout") : "normal";
     const demo = params.get("demo") === "1";
@@ -84,6 +84,7 @@
       requestAnimationFrame(frame);
     }
     requestAnimationFrame(frame);
+    if (params.get("invert") === "1") document.documentElement.style.filter = "invert(1)";
     if (layout === "mirror") document.body.classList.add("mirror");
     if (layout === "pyramid") document.body.classList.add("pyramid");
 
