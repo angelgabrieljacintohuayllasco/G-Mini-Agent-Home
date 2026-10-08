@@ -1,0 +1,144 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: read
+
+jobs:
+  esp32:
+    name: Firmware ${{ matrix.env }}
+    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        include:
+          - { env: esp32s3-oled, chip: esp32s3, boot: "0x0" }
+          - { env: esp32s3-sh1106, chip: esp32s3, boot: "0x0" }
+          - { env: esp32s3-st7789, chip: esp32s3, boot: "0x0" }
+          - { env: esp32s3-gc9a01, chip: esp32s3, boot: "0x0" }
+          - { env: esp32s3-speaker, chip: esp32s3, boot: "0x0" }
+          - { env: esp32dev-oled, chip: esp32, boot: "0x1000" }
+          - { env: esp32dev-speaker, chip: esp32, boot: "0x1000" }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install platformio "esptool>=4.7,<5"
+      - name: Compilar
+        run: pio run -d firmware/esp32-companion -e ${{ matrix.env }}
+      - name: Empaquetar
+        run: |
+          set -euo pipefail
+          build=firmware/esp32-companion/.pio/build/${{ matrix.env }}
+          out=dist/gmini-home-${{ matrix.env }}
+          mkdir -p "$out"
+          cp "$build/bootloader.bin" "$build/partitions.bin" "$build/firmware.bin" "$out/"
+          cp "$(find ~/.platformio/packages/framework-arduinoespressif32 -name boot_app0.bin | head -n 1)" "$out/"
+          cp docs/flashing.md "$out/FLASHING.md"
+          esptool.py --chip ${{ matrix.chip }} merge_bin -o "dist/gmini-home-${{ matrix.env }}-factory.bin" \
+            --flash_mode keep --flash_freq keep --flash_size keep \
+            ${{ matrix.boot }} "$out/bootloader.bin" 0x8000 "$out/partitions.bin" \
+            0xe000 "$out/boot_app0.bin" 0x10000 "$out/firmware.bin"
+          (cd dist && zip -qr "gmini-home-${{ matrix.env }}.zip" "gmini-home-${{ matrix.env }}" && rm -rf "gmini-home-${{ matrix.env }}")
+      - uses: actions/upload-artifact@v4
+        with:
+          name: release-${{ matrix.env }}
+          path: dist/*
+
+  arduino:
+    name: Firmware Arduino
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: arduino/setup-arduino-cli@v2
+      - name: Compilar Uno, Nano y Nano con bootloader viejo
+        run: |
+          set -euo pipefail
+          arduino-cli core update-index
+          arduino-cli core install arduino:avr
+          arduino-cli lib install U8g2
+          mkdir -p dist
+          for board in "uno:arduino:avr:uno" "nano:arduino:avr:nano" "nano-old:arduino:avr:nano:cpu=atmega328old"; do
+            name="${board%%:*}"; fqbn="${board#*:}"
+            arduino-cli compile --fqbn "$fqbn" --library firmware/libraries/GMiniEyes \
+              --output-dir "build/$name" firmware/arduino-usb-face
+            cp "build/$name/arduino-usb-face.ino.hex" "dist/arduino-usb-face-$name.hex"
+          done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: release-arduino
+          path: dist/*
+
+  packages:
+    name: Puente, cliente de Pi, carcasas y diagramas
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Armar los zips
+        run: |
+          set -euo pipefail
+          mkdir -p dist stage
+          # Puente USB: la biblioteca comun va junto al script.
+          mkdir -p stage/gmini-bridge
+          cp -r bridge/gmini_bridge bridge/gmini_serial_bridge.py bridge/requirements.txt bridge/README.md stage/gmini-bridge/
+          cp -r common/gmini_link stage/gmini-bridge/
+          cp LICENSE stage/gmini-bridge/
+          # Cliente de Raspberry Pi / PC con el kiosco.
+          mkdir -p stage/gmini-pi
+          cp -r raspberry-pi/. stage/gmini-pi/
+          cp -r common/gmini_link kiosk stage/gmini-pi/
+          cp LICENSE stage/gmini-pi/
+          # Kiosco solo.
+          cp -r kiosk stage/gmini-kiosk
+          # Carcasas y plantillas.
+          mkdir -p stage/gmini-home-stl
+          cp -r hardware/stl hardware/enclosures hardware/templates hardware/renders stage/gmini-home-stl/
+          cp LICENSE-hardware.md stage/gmini-home-stl/
+          # Diagramas.
+          mkdir -p stage/gmini-home-diagramas
+          cp -r hardware/wiring docs/img stage/gmini-home-diagramas/
+          cp -r docs/holograms/img stage/gmini-home-diagramas/hologramas
+          cp LICENSE-hardware.md stage/gmini-home-diagramas/
+          find stage -name '__pycache__' -prune -exec rm -rf {} +
+          cd stage
+          for d in */; do zip -qr "../dist/${d%/}.zip" "$d"; done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: release-packages
+          path: dist/*
+
+  publish:
+    name: Publicar la release
+    needs: [esp32, arduino, packages]
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: release-*
+          path: dist
+          merge-multiple: true
+      - name: Sumas SHA-256 y notas
+        run: |
+          set -euo pipefail
+          (cd dist && sha256sum * > SHA256SUMS.txt)
+          version="${GITHUB_REF_NAME#v}"
+          awk -v v="$version" '
+            $0 ~ "^## \\[" v "\\]" {on=1; next}
+            on && /^## \[/ {exit}
+            on {print}
+          ' CHANGELOG.md > notes.md
+          {
+            echo
+            echo "Grabación del firmware y direcciones de flash: ver FLASHING.md dentro de cada zip"
+            echo "o docs/flashing.md. Los archivos *-factory.bin se graban completos en 0x0."
+          } >> notes.md
+      - uses: softprops/action-gh-release@v2
+        with:
+          body_path: notes.md
+          files: dist/*

@@ -1,0 +1,142 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PIP_DISABLE_PIP_VERSION_CHECK: "1"
+
+jobs:
+  python:
+    name: Python ${{ matrix.python }}
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+      - name: Dependencias
+        run: pip install -r requirements-dev.txt
+      - name: Lint
+        run: ruff check common bridge raspberry-pi tools tests
+      - name: Archivos generados al dia
+        run: |
+          python tools/codegen/gen_expressions.py --check
+          python tools/diagrams/build_all.py --check
+          python tools/templates/pepper_pyramid.py --check
+      - name: Pruebas
+        env:
+          SDL_VIDEODRIVER: dummy
+          SDL_AUDIODRIVER: dummy
+        run: pytest
+
+  firmware-native:
+    name: Pruebas nativas del firmware
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/cache@v4
+        with:
+          path: ~/.platformio
+          key: pio-native-${{ hashFiles('firmware/esp32-companion/platformio.ini') }}
+      - run: pip install platformio
+      - run: pio test -d firmware/esp32-companion -e native
+
+  firmware-esp32:
+    name: ESP32 ${{ matrix.env }}
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        env:
+          - esp32s3-oled
+          - esp32s3-sh1106
+          - esp32s3-st7789
+          - esp32s3-gc9a01
+          - esp32s3-speaker
+          - esp32dev-oled
+          - esp32dev-speaker
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.platformio
+            firmware/esp32-companion/.pio/libdeps
+          key: pio-${{ matrix.env }}-${{ hashFiles('firmware/esp32-companion/platformio.ini') }}
+      - run: pip install platformio
+      - name: Compilar
+        run: pio run -d firmware/esp32-companion -e ${{ matrix.env }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: firmware-${{ matrix.env }}
+          retention-days: 7
+          path: |
+            firmware/esp32-companion/.pio/build/${{ matrix.env }}/firmware.bin
+            firmware/esp32-companion/.pio/build/${{ matrix.env }}/bootloader.bin
+            firmware/esp32-companion/.pio/build/${{ matrix.env }}/partitions.bin
+
+  firmware-arduino:
+    name: Arduino ${{ matrix.board.name }}
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        board:
+          - { name: uno, fqbn: "arduino:avr:uno" }
+          - { name: nano, fqbn: "arduino:avr:nano" }
+          - { name: nano-old, fqbn: "arduino:avr:nano:cpu=atmega328old" }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: arduino/setup-arduino-cli@v2
+      - name: Nucleo AVR y U8g2
+        run: |
+          arduino-cli core update-index
+          arduino-cli core install arduino:avr
+          arduino-cli lib install U8g2
+      - name: Compilar
+        run: >
+          arduino-cli compile --fqbn "${{ matrix.board.fqbn }}" --warnings default
+          --library firmware/libraries/GMiniEyes firmware/arduino-usb-face
+
+  openscad:
+    name: OpenSCAD (STL y renders)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Instalar OpenSCAD
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends openscad xvfb
+      - name: Exportar todas las piezas
+        run: python tools/render_enclosures.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: openscad-render
+          retention-days: 7
+          path: |
+            hardware/stl/*.stl
+            hardware/renders/*.png
