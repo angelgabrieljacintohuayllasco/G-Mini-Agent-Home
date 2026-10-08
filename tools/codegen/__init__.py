@@ -1,1 +1,1 @@
-﻿"""Generadores de codigo del repositorio."""
+"""Generadores de codigo del repositorio."""
