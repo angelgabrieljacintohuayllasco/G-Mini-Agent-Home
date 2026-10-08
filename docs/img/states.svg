@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1004.8" height="288.48" viewBox="0 0 1004.8 288.48" role="img" aria-label="Estados de G-Mini Home">
+  <title>Estados de G-Mini Home</title>
+  <desc>Estados del agente (campo status) sobre la emocion neutral.</desc>
+  <defs>
+    <clipPath id="clip-s0"><rect x="40" y="104" width="168.96" height="84.48" rx="12.64"/></clipPath>
+    <clipPath id="clip-s1"><rect x="228.96" y="104" width="168.96" height="84.48" rx="12.64"/></clipPath>
+    <clipPath id="clip-s2"><rect x="417.92" y="104" width="168.96" height="84.48" rx="12.64"/></clipPath>
+    <clipPath id="clip-s3"><rect x="606.88" y="104" width="168.96" height="84.48" rx="12.64"/></clipPath>
+    <clipPath id="clip-s4"><rect x="795.84" y="104" width="168.96" height="84.48" rx="12.64"/></clipPath>
+  </defs>
+  <rect x="0" y="0" width="1004.8" height="288.48" fill="#ffffff"/>
+  <text x="32" y="44" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="700" fill="#1d2733" text-anchor="start">Estados</text>
+  <text x="32" y="68" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#5b6b7b" text-anchor="start">Campo status del protocolo: idle, listening, thinking, acting y speaking</text>
+  <rect x="34" y="98" width="180.96" height="96.48" rx="17.64" fill="#1b2631"/>
+  <rect x="40" y="104" width="168.96" height="84.48" rx="12.64" fill="#06121a"/>
+  <g clip-path="url(#clip-s0)">
+    <rect x="68.25" y="120.37" width="51.74" height="51.74" rx="12.67" fill="#0e3a47"/>
+    <rect x="70.36" y="122.48" width="47.52" height="47.52" rx="10.56" fill="#3fe0ff"/>
+    <rect x="128.97" y="120.37" width="51.74" height="51.74" rx="12.67" fill="#0e3a47"/>
+    <rect x="131.08" y="122.48" width="47.52" height="47.52" rx="10.56" fill="#3fe0ff"/>
+  </g>
+  <text x="40" y="218.48" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#1d2733" text-anchor="start">Reposo</text>
+  <text x="40" y="236.48" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="11.5" font-weight="400" fill="#5b6b7b" text-anchor="start">idle</text>
+  <rect x="222.96" y="98" width="180.96" height="96.48" rx="17.64" fill="#1b2631"/>
+  <rect x="228.96" y="104" width="168.96" height="84.48" rx="12.64" fill="#06121a"/>
+  <g clip-path="url(#clip-s1)">
+    <rect x="254.83" y="117.05" width="54.12" height="58.37" rx="12.67" fill="#0e3a47"/>
+    <rect x="256.94" y="119.17" width="49.9" height="54.15" rx="10.56" fill="#3fe0ff"/>
+    <rect x="317.93" y="117.05" width="54.12" height="58.37" rx="12.67" fill="#0e3a47"/>
+    <rect x="320.04" y="119.17" width="49.9" height="54.15" rx="10.56" fill="#3fe0ff"/>
+  </g>
+  <text x="228.96" y="218.48" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#1d2733" text-anchor="start">Escuchando</text>
+  <text x="228.96" y="236.48" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="11.5" font-weight="400" fill="#5b6b7b" text-anchor="start">listening</text>
+  <rect x="411.92" y="98" width="180.96" height="96.48" rx="17.64" fill="#1b2631"/>
+  <rect x="417.92" y="104" width="168.96" height="84.48" rx="12.64" fill="#06121a"/>
+  <g clip-path="url(#clip-s2)">
+    <rect x="460.03" y="114.19" width="51.74" height="49.84" rx="12.67" fill="#0e3a47"/>
+    <rect x="462.14" y="116.3" width="47.52" height="45.61" rx="10.56" fill="#3fe0ff"/>
+    <rect x="459.03" y="113.19" width="53.74" height="9.5" fill="#06121a"/>
+    <rect x="520.75" y="112.29" width="51.74" height="53.64" rx="12.67" fill="#0e3a47"/>
+    <rect x="522.86" y="114.4" width="47.52" height="49.42" rx="10.56" fill="#3fe0ff"/>
+    <rect x="519.75" y="111.29" width="53.74" height="10.03" fill="#06121a"/>
+  </g>
+  <text x="417.92" y="218.48" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#1d2733" text-anchor="start">Pensando</text>
+  <text x="417.92" y="236.48" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="11.5" font-weight="400" fill="#5b6b7b" text-anchor="start">thinking</text>
+  <rect x="600.88" y="98" width="180.96" height="96.48" rx="17.64" fill="#1b2631"/>
+  <rect x="606.88" y="104" width="168.96" height="84.48" rx="12.64" fill="#06121a"/>
+  <g clip-path="url(#clip-s3)">
+    <rect x="621.99" y="121.05" width="51.74" height="53.54" rx="12.67" fill="#0e3a47"/>
+    <rect x="624.1" y="123.17" width="47.52" height="49.32" rx="10.56" fill="#3fe0ff"/>
+    <rect x="620.99" y="120.05" width="53.74" height="13.96" fill="#06121a"/>
+    <rect x="682.71" y="122.86" width="51.74" height="49.94" rx="12.67" fill="#0e3a47"/>
+    <rect x="684.82" y="124.97" width="47.52" height="45.71" rx="10.56" fill="#3fe0ff"/>
+    <rect x="681.71" y="121.86" width="53.74" height="13.17" fill="#06121a"/>
+  </g>
+  <text x="606.88" y="218.48" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#1d2733" text-anchor="start">Trabajando</text>
+  <text x="606.88" y="236.48" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="11.5" font-weight="400" fill="#5b6b7b" text-anchor="start">acting</text>
+  <rect x="789.84" y="98" width="180.96" height="96.48" rx="17.64" fill="#1b2631"/>
+  <rect x="795.84" y="104" width="168.96" height="84.48" rx="12.64" fill="#06121a"/>
+  <g clip-path="url(#clip-s4)">
+    <rect x="824.09" y="114.78" width="51.74" height="47.08" rx="12.67" fill="#0e3a47"/>
+    <rect x="826.2" y="116.89" width="47.52" height="42.86" rx="10.56" fill="#3fe0ff"/>
+    <rect x="884.81" y="114.78" width="51.74" height="47.08" rx="12.67" fill="#0e3a47"/>
+    <rect x="886.92" y="116.89" width="47.52" height="42.86" rx="10.56" fill="#3fe0ff"/>
+    <rect x="862.24" y="166.35" width="36.17" height="11.35" rx="5.68" fill="#3fe0ff"/>
+  </g>
+  <text x="795.84" y="218.48" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#1d2733" text-anchor="start">Hablando</text>
+  <text x="795.84" y="236.48" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="11.5" font-weight="400" fill="#5b6b7b" text-anchor="start">speaking</text>
+  <line x1="40" y1="254.48" x2="964.8" y2="254.48" fill="none" stroke="#c9d1d9" stroke-width="1" stroke-linecap="round" />
+  <text x="40" y="274.48" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#5b6b7b" text-anchor="start">En speaking la boca sigue el volumen del audio; en acting la mirada barre de lado a lado.</text>
+</svg>
