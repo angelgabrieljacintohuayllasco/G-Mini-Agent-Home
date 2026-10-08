@@ -1,0 +1,8 @@
+# Pruebas y herramientas (CI y desarrollo local).
+pytest>=8,<9
+ruff>=0.6
+httpx>=0.27,<1
+websockets>=13,<16
+pyserial>=3.5,<4
+# Prueba de humo del dibujo con pygame (se omite si no esta instalado).
+pygame>=2.5,<3
