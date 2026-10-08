@@ -1,0 +1,69 @@
+{
+  "$comment": "Fuente unica de las expresiones de la cara. Unidades en pixeles de un lienzo de referencia de 128x64; cada renderer escala. Tras editar, ejecuta: python tools/codegen/gen_expressions.py",
+  "version": 1,
+  "reference": { "width": 128, "height": 64 },
+  "colors": {
+    "background": "#000000",
+    "eye": "#3FE0FF",
+    "glow": "#0B4A5C",
+    "accent": "#FF4D6D",
+    "text": "#E6FBFF"
+  },
+  "timing": {
+    "shape_tau_ms": 70,
+    "gaze_tau_ms": 45,
+    "level_attack_ms": 25,
+    "level_release_ms": 140,
+    "blink_close_ms": 70,
+    "blink_hold_ms": 35,
+    "blink_open_ms": 110,
+    "sleep_after_ms": 600000,
+    "shake_ms": 900
+  },
+  "base": {
+    "w": 36, "h": 36, "r": 8, "gap": 10, "dy": 0,
+    "lid_top": 0, "slant_in": 0, "slant_out": 0, "lid_bottom": 0,
+    "look_x": 0, "look_y": 0, "scale_l": 1, "scale_r": 1,
+    "bounce": 0, "shake": 0, "pulse": 0, "pulse_hz": 1.2,
+    "blink": [2200, 6000],
+    "saccade": [900, 3200],
+    "shape": "round",
+    "accent": false
+  },
+  "emotions": {
+    "neutral": {},
+    "happy": { "h": 38, "dy": -1, "lid_bottom": 0.46, "bounce": 0.8, "saccade": [1400, 3600] },
+    "sad": { "h": 30, "dy": 5, "slant_out": 0.5, "look_y": 0.35, "blink": [3000, 7000], "saccade": [2600, 6000] },
+    "surprised": { "w": 40, "h": 44, "r": 16, "gap": 8, "dy": -2, "blink": [3500, 8000], "saccade": [1600, 4000] },
+    "angry": { "h": 31, "dy": 2, "lid_top": 0.04, "slant_in": 0.55, "saccade": [1200, 3000] },
+    "thinking": { "look_x": 0.55, "look_y": -0.45, "scale_r": 0.84, "lid_top": 0.12, "saccade": [1800, 4200] },
+    "sleepy": { "dy": 3, "lid_top": 0.55, "slant_out": 0.12, "blink": [1500, 3600], "saccade": [4000, 9000] },
+    "love": { "w": 36, "h": 34, "shape": "heart", "pulse": 0.09, "pulse_hz": 1.3, "accent": true, "saccade": [2000, 5000] },
+    "error": { "w": 30, "h": 30, "shape": "cross", "shake": 2.2, "accent": true, "blink": [0, 0], "saccade": [0, 0] }
+  },
+  "activities": {
+    "idle": {},
+    "listening": {
+      "mul_w": 1.05, "mul_h": 1.1, "look": [0, 0], "saccade": [0, 0], "blink": [4000, 9000], "level_h": 0.12
+    },
+    "thinking": {
+      "lid_top_min": 0.14, "scan": { "x": 0.5, "y": -0.45, "ms": [1100, 1900] }, "blink": [2600, 6000]
+    },
+    "acting": {
+      "lid_top_min": 0.22, "scan": { "x": 0.65, "y": 0.1, "ms": [320, 650] }, "blink": [2000, 5000]
+    },
+    "speaking": {
+      "add_dy": -6, "mouth": true, "level_h": -0.14, "saccade": [1500, 3500]
+    }
+  },
+  "aliases": {
+    "calm": "neutral",
+    "curious": "surprised",
+    "tired": "sleepy",
+    "confused": "thinking",
+    "sorry": "sad",
+    "joy": "happy",
+    "excited": "happy",
+    "fear": "surprised"
+  }
+}
