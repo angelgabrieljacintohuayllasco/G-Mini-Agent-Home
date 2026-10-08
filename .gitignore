@@ -1,0 +1,37 @@
+# PlatformIO / Arduino
+.pio/
+.pioenvs/
+.piolibdeps/
+.vscode/
+firmware/**/build/
+*.bin
+*.elf
+*.hex
+*.map
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+dist/
+
+# Salidas temporales de herramientas
+out/
+tmp/
+*.log
+
+# Secretos y configuracion local
+.env
+*.local.toml
+tokens.json
+session_token
+
+# Sistema operativo
+Thumbs.db
+desktop.ini
+.DS_Store
