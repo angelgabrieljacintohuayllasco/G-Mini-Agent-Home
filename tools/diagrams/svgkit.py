@@ -6,9 +6,9 @@ bytes), para que los diagramas se puedan regenerar y revisar en git.
 
 from __future__ import annotations
 
+from collections.abc import Iterator, Sequence
 from contextlib import contextmanager
 from pathlib import Path
-from typing import Iterator, Sequence
 from xml.sax.saxutils import escape
 
 FONT_SANS = "'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif"

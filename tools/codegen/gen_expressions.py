@@ -129,7 +129,7 @@ def load_spec(path: Path = SOURCE) -> dict[str, Any]:
     base = raw["base"]
     emotions = {name: resolve_emotion(name, base, ov) for name, ov in raw["emotions"].items()}
     activities = {name: resolve_activity(name, ov) for name, ov in raw["activities"].items()}
-    if list(emotions)[0] != "neutral" or list(activities)[0] != "idle":
+    if next(iter(emotions)) != "neutral" or next(iter(activities)) != "idle":
         raise SpecError("la primera emocion debe ser 'neutral' y la primera actividad 'idle'")
     aliases = raw.get("aliases", {})
     for alias, target in aliases.items():

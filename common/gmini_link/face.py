@@ -614,7 +614,7 @@ def settle(engine: EyesEngine, emotion: str = "neutral", activity: str = "idle",
     engine.set_emotion(emotion)
     engine.set_activity(activity)
     engine.set_level(level)
-    now = engine._last_ms  # noqa: SLF001 - continuidad temporal del motor
+    now = engine._last_ms
     for _ in range(0, ms, 10):
         now += 10
         engine.update(now)
