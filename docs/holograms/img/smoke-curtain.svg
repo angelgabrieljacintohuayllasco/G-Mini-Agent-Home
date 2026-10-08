@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="600" viewBox="0 0 1000 600" role="img" aria-label="Cortina de humo y viento">
+  <title>Cortina de humo y viento</title>
+  <desc>Humo de maquina de niebla guiado por un tunel de viento.</desc>
+  <defs>
+    <linearGradient id="smoke" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#dfe7ec" stop-opacity="0.95"/><stop offset="1" stop-color="#dfe7ec" stop-opacity="0"/></linearGradient>
+    <clipPath id="smoke-ghost"><rect x="380" y="210" width="243.2" height="121.6" rx="13.8"/></clipPath>
+    <marker id="ray-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0ea5c6"/></marker>
+  </defs>
+  <rect x="0" y="0" width="1000" height="600" fill="#ffffff"/>
+  <text x="32" y="44" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="700" fill="#1d2733" text-anchor="start">Cortina de humo y viento</text>
+  <text x="32" y="68" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#5b6b7b" text-anchor="start">Una máquina de humo alimenta un túnel con ventiladores; la lámina de humo recibe la proyección desde abajo</text>
+  <rect x="150" y="440" width="700" height="60" rx="10" fill="#e7eef2" stroke="#c9d1d9" stroke-width="1.5"/>
+  <circle cx="220" cy="470" r="22" fill="#ffffff" stroke="#c9d1d9" stroke-width="1.2"/>
+  <line x1="206" y1="456" x2="234" y2="484" fill="none" stroke="#5b6b7b" stroke-width="1.2" stroke-linecap="round" />
+  <line x1="234" y1="456" x2="206" y2="484" fill="none" stroke="#5b6b7b" stroke-width="1.2" stroke-linecap="round" />
+  <circle cx="330" cy="470" r="22" fill="#ffffff" stroke="#c9d1d9" stroke-width="1.2"/>
+  <line x1="316" y1="456" x2="344" y2="484" fill="none" stroke="#5b6b7b" stroke-width="1.2" stroke-linecap="round" />
+  <line x1="344" y1="456" x2="316" y2="484" fill="none" stroke="#5b6b7b" stroke-width="1.2" stroke-linecap="round" />
+  <circle cx="440" cy="470" r="22" fill="#ffffff" stroke="#c9d1d9" stroke-width="1.2"/>
+  <line x1="426" y1="456" x2="454" y2="484" fill="none" stroke="#5b6b7b" stroke-width="1.2" stroke-linecap="round" />
+  <line x1="454" y1="456" x2="426" y2="484" fill="none" stroke="#5b6b7b" stroke-width="1.2" stroke-linecap="round" />
+  <circle cx="550" cy="470" r="22" fill="#ffffff" stroke="#c9d1d9" stroke-width="1.2"/>
+  <line x1="536" y1="456" x2="564" y2="484" fill="none" stroke="#5b6b7b" stroke-width="1.2" stroke-linecap="round" />
+  <line x1="564" y1="456" x2="536" y2="484" fill="none" stroke="#5b6b7b" stroke-width="1.2" stroke-linecap="round" />
+  <circle cx="660" cy="470" r="22" fill="#ffffff" stroke="#c9d1d9" stroke-width="1.2"/>
+  <line x1="646" y1="456" x2="674" y2="484" fill="none" stroke="#5b6b7b" stroke-width="1.2" stroke-linecap="round" />
+  <line x1="674" y1="456" x2="646" y2="484" fill="none" stroke="#5b6b7b" stroke-width="1.2" stroke-linecap="round" />
+  <circle cx="770" cy="470" r="22" fill="#ffffff" stroke="#c9d1d9" stroke-width="1.2"/>
+  <line x1="756" y1="456" x2="784" y2="484" fill="none" stroke="#5b6b7b" stroke-width="1.2" stroke-linecap="round" />
+  <line x1="784" y1="456" x2="756" y2="484" fill="none" stroke="#5b6b7b" stroke-width="1.2" stroke-linecap="round" />
+  <text x="500" y="525" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#5b6b7b" text-anchor="middle">túnel de viento: ventiladores de PC + difusor de panal</text>
+  <rect x="40" y="452" width="90" height="40" rx="6" fill="#3d4a54"/>
+  <text x="85" y="512" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#5b6b7b" text-anchor="middle">máquina de humo</text>
+  <line x1="130" y1="472" x2="150" y2="472" fill="none" stroke="#9aa8b2" stroke-width="6" stroke-linecap="round" />
+  <rect x="170" y="150" width="660" height="290" fill="url(#smoke)"/>
+  <g opacity="0.55">
+    <rect x="380" y="210" width="243.2" height="121.6" rx="13.8" fill="#e8fbff"/>
+    <g clip-path="url(#smoke-ghost)">
+      <rect x="414.96" y="222.16" width="82.08" height="89.68" rx="33.44" fill="#bdeff9"/>
+      <rect x="418" y="225.2" width="76" height="83.6" rx="30.4" fill="#3fe0ff"/>
+      <rect x="506.16" y="222.16" width="82.08" height="89.68" rx="33.44" fill="#bdeff9"/>
+      <rect x="509.2" y="225.2" width="76" height="83.6" rx="30.4" fill="#3fe0ff"/>
+    </g>
+  </g>
+  <rect x="376" y="206" width="251.2" height="129.6" rx="10" fill="none" stroke="#0ea5c6" stroke-width="1.2" stroke-dasharray="4 4"/>
+  <line x1="500" y1="560" x2="470" y2="340" fill="none" stroke="#0ea5c6" stroke-width="1.6" stroke-dasharray="6 4" stroke-linecap="butt" marker-end="url(#ray-arrow)"/>
+  <line x1="500" y1="560" x2="560" y2="340" fill="none" stroke="#0ea5c6" stroke-width="1.6" stroke-dasharray="6 4" stroke-linecap="butt" marker-end="url(#ray-arrow)"/>
+  <rect x="470" y="545" width="60" height="30" rx="6" fill="#2f3b44"/>
+  <rect x="640" y="120" width="330" height="79.8" rx="8" fill="#fff4e6" stroke="#c2410c" stroke-width="1"/>
+  <rect x="640" y="120" width="4" height="79.8" rx="2" fill="#c2410c"/>
+  <text x="654" y="139" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" fill="#c2410c" text-anchor="start">Humo y CO2</text>
+  <text x="654" y="154.95" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#1d2733" text-anchor="start">Ventila el ambiente: el humo de glicol</text>
+  <text x="654" y="170.9" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#1d2733" text-anchor="start">irrita y activa detectores de humo.</text>
+  <text x="654" y="186.85" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#1d2733" text-anchor="start">Hielo seco: nunca en espacios cerrados.</text>
+  <line x1="32" y1="566" x2="968" y2="566" fill="none" stroke="#c9d1d9" stroke-width="1" stroke-linecap="round" />
+  <text x="32" y="586" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#5b6b7b" text-anchor="start">Funciona mejor a oscuras y sin corrientes de aire en la sala</text>
+  <text x="968" y="586" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#5b6b7b" text-anchor="end">G-Mini Home  |  CC BY-SA 4.0</text>
+</svg>

@@ -18,10 +18,10 @@
   <rect x="34" y="98" width="293.6" height="152.8" rx="19.4" fill="#1b2631"/>
   <rect x="40" y="104" width="281.6" height="140.8" rx="14.4" fill="#06121a"/>
   <g clip-path="url(#clip-e0)">
-    <rect x="87.08" y="131.28" width="86.24" height="86.23" rx="21.12" fill="#0e3a47"/>
-    <rect x="90.6" y="134.8" width="79.2" height="79.19" rx="17.6" fill="#3fe0ff"/>
-    <rect x="188.28" y="131.28" width="86.24" height="86.23" rx="21.12" fill="#0e3a47"/>
-    <rect x="191.8" y="134.8" width="79.2" height="79.19" rx="17.6" fill="#3fe0ff"/>
+    <rect x="87.08" y="131.29" width="86.24" height="86.23" rx="21.12" fill="#0e3a47"/>
+    <rect x="90.6" y="134.81" width="79.2" height="79.19" rx="17.6" fill="#3fe0ff"/>
+    <rect x="188.28" y="131.29" width="86.24" height="86.23" rx="21.12" fill="#0e3a47"/>
+    <rect x="191.8" y="134.81" width="79.2" height="79.19" rx="17.6" fill="#3fe0ff"/>
   </g>
   <text x="40" y="276.8" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" fill="#1d2733" text-anchor="start">Neutral</text>
   <text x="321.6" y="276.8" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="12.5" font-weight="400" fill="#5b6b7b" text-anchor="end">neutral</text>
@@ -92,16 +92,16 @@
   <rect x="34" y="519.6" width="293.6" height="152.8" rx="19.4" fill="#1b2631"/>
   <rect x="40" y="525.6" width="281.6" height="140.8" rx="14.4" fill="#06121a"/>
   <g clip-path="url(#clip-e6)">
-    <rect x="87.08" y="559.48" width="86.24" height="86.23" rx="21.12" fill="#0e3a47"/>
-    <rect x="90.6" y="563" width="79.2" height="79.19" rx="17.6" fill="#3fe0ff"/>
-    <rect x="86.08" y="558.48" width="88.24" height="48.08" fill="#06121a"/>
-    <polygon points="86.08,558.48 174.32,558.48 174.32,606.56" fill="#06121a" stroke="#06121a" stroke-width="0.6" stroke-linejoin="round" />
-    <polygon points="86.08,558.48 174.32,606.56 86.08,616.06" fill="#06121a" stroke="#06121a" stroke-width="0.6" stroke-linejoin="round" />
-    <rect x="188.28" y="559.48" width="86.24" height="86.23" rx="21.12" fill="#0e3a47"/>
-    <rect x="191.8" y="563" width="79.2" height="79.19" rx="17.6" fill="#3fe0ff"/>
-    <rect x="187.28" y="558.48" width="88.24" height="48.08" fill="#06121a"/>
-    <polygon points="275.52,558.48 187.28,558.48 187.28,606.56" fill="#06121a" stroke="#06121a" stroke-width="0.6" stroke-linejoin="round" />
-    <polygon points="275.52,558.48 187.28,606.56 275.52,616.06" fill="#06121a" stroke="#06121a" stroke-width="0.6" stroke-linejoin="round" />
+    <rect x="87.08" y="559.49" width="86.24" height="86.23" rx="21.12" fill="#0e3a47"/>
+    <rect x="90.6" y="563.01" width="79.2" height="79.19" rx="17.6" fill="#3fe0ff"/>
+    <rect x="86.08" y="558.49" width="88.24" height="48.07" fill="#06121a"/>
+    <polygon points="86.08,558.49 174.32,558.49 174.32,606.56" fill="#06121a" stroke="#06121a" stroke-width="0.6" stroke-linejoin="round" />
+    <polygon points="86.08,558.49 174.32,606.56 86.08,616.06" fill="#06121a" stroke="#06121a" stroke-width="0.6" stroke-linejoin="round" />
+    <rect x="188.28" y="559.49" width="86.24" height="86.23" rx="21.12" fill="#0e3a47"/>
+    <rect x="191.8" y="563.01" width="79.2" height="79.19" rx="17.6" fill="#3fe0ff"/>
+    <rect x="187.28" y="558.49" width="88.24" height="48.07" fill="#06121a"/>
+    <polygon points="275.52,558.49 187.28,558.49 187.28,606.56" fill="#06121a" stroke="#06121a" stroke-width="0.6" stroke-linejoin="round" />
+    <polygon points="275.52,558.49 187.28,606.56 275.52,616.06" fill="#06121a" stroke="#06121a" stroke-width="0.6" stroke-linejoin="round" />
   </g>
   <text x="40" y="698.4" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" fill="#1d2733" text-anchor="start">Sueño</text>
   <text x="321.6" y="698.4" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="12.5" font-weight="400" fill="#5b6b7b" text-anchor="end">sleepy</text>
@@ -110,10 +110,10 @@
   <g clip-path="url(#clip-e7)">
     <circle cx="424.64" cy="583.96" r="20.08" fill="#ff4d6d"/>
     <circle cx="459.15" cy="583.96" r="20.08" fill="#ff4d6d"/>
-    <polygon points="405.16,588.98 478.63,588.98 441.89,631.42" fill="#ff4d6d" stroke="#ff4d6d" stroke-width="0.6" stroke-linejoin="round" />
+    <polygon points="405.17,588.98 478.63,588.98 441.9,631.42" fill="#ff4d6d" stroke="#ff4d6d" stroke-width="0.6" stroke-linejoin="round" />
     <circle cx="521.65" cy="583.96" r="20.08" fill="#ff4d6d"/>
     <circle cx="556.16" cy="583.96" r="20.08" fill="#ff4d6d"/>
-    <polygon points="502.17,588.98 575.64,588.98 538.91,631.42" fill="#ff4d6d" stroke="#ff4d6d" stroke-width="0.6" stroke-linejoin="round" />
+    <polygon points="502.17,588.98 575.63,588.98 538.9,631.42" fill="#ff4d6d" stroke="#ff4d6d" stroke-width="0.6" stroke-linejoin="round" />
   </g>
   <text x="349.6" y="698.4" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" fill="#1d2733" text-anchor="start">Cariño</text>
   <text x="631.2" y="698.4" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="12.5" font-weight="400" fill="#5b6b7b" text-anchor="end">love</text>

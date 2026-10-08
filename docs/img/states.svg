@@ -15,9 +15,9 @@
   <rect x="40" y="104" width="168.96" height="84.48" rx="12.64" fill="#06121a"/>
   <g clip-path="url(#clip-s0)">
     <rect x="68.25" y="120.37" width="51.74" height="51.74" rx="12.67" fill="#0e3a47"/>
-    <rect x="70.36" y="122.48" width="47.52" height="47.52" rx="10.56" fill="#3fe0ff"/>
+    <rect x="70.36" y="122.48" width="47.52" height="47.51" rx="10.56" fill="#3fe0ff"/>
     <rect x="128.97" y="120.37" width="51.74" height="51.74" rx="12.67" fill="#0e3a47"/>
-    <rect x="131.08" y="122.48" width="47.52" height="47.52" rx="10.56" fill="#3fe0ff"/>
+    <rect x="131.08" y="122.48" width="47.52" height="47.51" rx="10.56" fill="#3fe0ff"/>
   </g>
   <text x="40" y="218.48" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#1d2733" text-anchor="start">Reposo</text>
   <text x="40" y="236.48" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="11.5" font-weight="400" fill="#5b6b7b" text-anchor="start">idle</text>
@@ -35,10 +35,10 @@
   <rect x="417.92" y="104" width="168.96" height="84.48" rx="12.64" fill="#06121a"/>
   <g clip-path="url(#clip-s2)">
     <rect x="460.03" y="114.19" width="51.74" height="49.84" rx="12.67" fill="#0e3a47"/>
-    <rect x="462.14" y="116.3" width="47.52" height="45.61" rx="10.56" fill="#3fe0ff"/>
+    <rect x="462.14" y="116.31" width="47.52" height="45.61" rx="10.56" fill="#3fe0ff"/>
     <rect x="459.03" y="113.19" width="53.74" height="9.5" fill="#06121a"/>
     <rect x="520.75" y="112.29" width="51.74" height="53.64" rx="12.67" fill="#0e3a47"/>
-    <rect x="522.86" y="114.4" width="47.52" height="49.42" rx="10.56" fill="#3fe0ff"/>
+    <rect x="522.86" y="114.4" width="47.52" height="49.41" rx="10.56" fill="#3fe0ff"/>
     <rect x="519.75" y="111.29" width="53.74" height="10.03" fill="#06121a"/>
   </g>
   <text x="417.92" y="218.48" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#1d2733" text-anchor="start">Pensando</text>
@@ -46,12 +46,12 @@
   <rect x="600.88" y="98" width="180.96" height="96.48" rx="17.64" fill="#1b2631"/>
   <rect x="606.88" y="104" width="168.96" height="84.48" rx="12.64" fill="#06121a"/>
   <g clip-path="url(#clip-s3)">
-    <rect x="621.99" y="121.05" width="51.74" height="53.54" rx="12.67" fill="#0e3a47"/>
-    <rect x="624.1" y="123.17" width="47.52" height="49.32" rx="10.56" fill="#3fe0ff"/>
-    <rect x="620.99" y="120.05" width="53.74" height="13.96" fill="#06121a"/>
-    <rect x="682.71" y="122.86" width="51.74" height="49.94" rx="12.67" fill="#0e3a47"/>
-    <rect x="684.82" y="124.97" width="47.52" height="45.71" rx="10.56" fill="#3fe0ff"/>
-    <rect x="681.71" y="121.86" width="53.74" height="13.17" fill="#06121a"/>
+    <rect x="623.03" y="121.13" width="51.74" height="53.4" rx="12.67" fill="#0e3a47"/>
+    <rect x="625.14" y="123.24" width="47.52" height="49.17" rx="10.56" fill="#3fe0ff"/>
+    <rect x="622.03" y="120.13" width="53.74" height="13.93" fill="#06121a"/>
+    <rect x="683.75" y="122.78" width="51.74" height="50.08" rx="12.67" fill="#0e3a47"/>
+    <rect x="685.86" y="124.9" width="47.52" height="45.85" rx="10.56" fill="#3fe0ff"/>
+    <rect x="682.75" y="121.78" width="53.74" height="13.2" fill="#06121a"/>
   </g>
   <text x="606.88" y="218.48" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#1d2733" text-anchor="start">Trabajando</text>
   <text x="606.88" y="236.48" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="11.5" font-weight="400" fill="#5b6b7b" text-anchor="start">acting</text>

@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="600" viewBox="0 0 1000 600" role="img" aria-label="Pirámide de Pepper">
+  <title>Pirámide de Pepper</title>
+  <desc>Corte lateral y vista superior de la pirámide de 4 caras.</desc>
+  <defs>
+    <marker id="ray-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0ea5c6"/></marker>
+    <clipPath id="pyr-ghost"><rect x="232" y="302" width="96" height="48" rx="11.5"/></clipPath>
+    <clipPath id="pyr-top-0"><rect x="737" y="183" width="96" height="48" rx="11.5"/></clipPath>
+    <clipPath id="pyr-top-180"><rect x="737" y="359" width="96" height="48" rx="11.5"/></clipPath>
+    <clipPath id="pyr-top-90"><rect x="649" y="271" width="96" height="48" rx="11.5"/></clipPath>
+    <clipPath id="pyr-top-270"><rect x="825" y="271" width="96" height="48" rx="11.5"/></clipPath>
+  </defs>
+  <rect x="0" y="0" width="1000" height="600" fill="#ffffff"/>
+  <text x="32" y="44" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="700" fill="#1d2733" text-anchor="start">Pirámide de Pepper (4 caras)</text>
+  <text x="32" y="68" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#5b6b7b" text-anchor="start">Cuatro trapecios a 45° sobre una pantalla horizontal: cada cara refleja una vista y la imagen flota al centro</text>
+  <text x="70" y="120" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#1d2733" text-anchor="start">Corte lateral</text>
+  <rect x="70" y="430" width="420" height="26" rx="6" fill="#16232d"/>
+  <text x="280" y="476" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#5b6b7b" text-anchor="middle">pantalla horizontal (teléfono, tablet o monitor)</text>
+  <polyline points="265,430 130,295" fill="none" stroke="#7cc4d6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+  <polyline points="295,430 430,295" fill="none" stroke="#7cc4d6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="130" y="424" width="135" height="6" fill="#3fe0ff" opacity="0.8"/>
+  <line x1="190" y1="424" x2="190" y2="355" fill="none" stroke="#0ea5c6" stroke-width="1.6" stroke-dasharray="6 4" stroke-linecap="round" />
+  <line x1="190" y1="355" x2="92" y2="355" fill="none" stroke="#0ea5c6" stroke-width="1.6" stroke-dasharray="6 4" stroke-linecap="butt" marker-end="url(#ray-arrow)"/>
+  <g opacity="0.55">
+    <rect x="232" y="302" width="96" height="48" rx="11.5" fill="#e8fbff"/>
+    <g clip-path="url(#pyr-ghost)">
+      <rect x="248.05" y="309.2" width="29.4" height="30.9" rx="7.2" fill="#bdeff9"/>
+      <rect x="249.25" y="310.4" width="27" height="28.5" rx="6" fill="#3fe0ff"/>
+      <circle cx="262.75" cy="343.73" r="17.94" fill="#e8fbff"/>
+      <rect x="282.55" y="309.2" width="29.4" height="30.9" rx="7.2" fill="#bdeff9"/>
+      <rect x="283.75" y="310.4" width="27" height="28.5" rx="6" fill="#3fe0ff"/>
+      <circle cx="297.25" cy="343.73" r="17.94" fill="#e8fbff"/>
+    </g>
+  </g>
+  <rect x="228" y="298" width="104" height="56" rx="10" fill="none" stroke="#0ea5c6" stroke-width="1.2" stroke-dasharray="4 4"/>
+  <ellipse cx="50" cy="355" rx="20" ry="12" fill="#ffffff" stroke="#1d2733" stroke-width="1.6"/>
+  <circle cx="56" cy="355" r="6.5" fill="#0b7285"/>
+  <circle cx="56" cy="355" r="2.6" fill="#1d2733"/>
+  <text x="50" y="387" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#5b6b7b" text-anchor="middle">observador</text>
+  <line x1="390" y1="335" x2="510" y2="220" fill="none" stroke="#5b6b7b" stroke-width="1" stroke-linecap="round" />
+  <circle cx="390" cy="335" r="2.6" fill="#1d2733"/>
+  <text x="516" y="224" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#1d2733" text-anchor="start">Lámina a 45°</text>
+  <text x="516" y="241" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#5b6b7b" text-anchor="start">PET, acetato o acrílico</text>
+  <line x1="280" y1="335" x2="510" y2="280" fill="none" stroke="#5b6b7b" stroke-width="1" stroke-linecap="round" />
+  <circle cx="280" cy="335" r="2.6" fill="#1d2733"/>
+  <text x="516" y="284" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#1d2733" text-anchor="start">Imagen flotante</text>
+  <text x="516" y="301" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#5b6b7b" text-anchor="start">altura máx. = (b - a) / 2</text>
+  <text x="640" y="120" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#1d2733" text-anchor="start">Vista superior: lo que muestra la pantalla</text>
+  <rect x="640" y="150" width="290" height="290" rx="10" fill="#16232d"/>
+  <polygon points="770,280 800,280 800,310 770,310" fill="none" stroke="#7cc4d6" stroke-width="2" stroke-linejoin="round" />
+  <line x1="640" y1="150" x2="770" y2="280" fill="none" stroke="#7cc4d6" stroke-width="1.5" stroke-dasharray="5 4" stroke-linecap="round" />
+  <line x1="930" y1="150" x2="800" y2="280" fill="none" stroke="#7cc4d6" stroke-width="1.5" stroke-dasharray="5 4" stroke-linecap="round" />
+  <line x1="930" y1="440" x2="800" y2="310" fill="none" stroke="#7cc4d6" stroke-width="1.5" stroke-dasharray="5 4" stroke-linecap="round" />
+  <line x1="640" y1="440" x2="770" y2="310" fill="none" stroke="#7cc4d6" stroke-width="1.5" stroke-dasharray="5 4" stroke-linecap="round" />
+  <g transform="rotate(0 785.0 207.0)">
+    <rect x="737" y="183" width="96" height="48" rx="11.5" fill="#06121a"/>
+    <g clip-path="url(#pyr-top-0)">
+      <rect x="753.05" y="190.2" width="29.4" height="30.9" rx="7.2" fill="#0e3a47"/>
+      <rect x="754.25" y="191.4" width="27" height="28.5" rx="6" fill="#3fe0ff"/>
+      <circle cx="767.75" cy="224.73" r="17.94" fill="#06121a"/>
+      <rect x="787.55" y="190.2" width="29.4" height="30.9" rx="7.2" fill="#0e3a47"/>
+      <rect x="788.75" y="191.4" width="27" height="28.5" rx="6" fill="#3fe0ff"/>
+      <circle cx="802.25" cy="224.73" r="17.94" fill="#06121a"/>
+    </g>
+  </g>
+  <g transform="rotate(-180 785.0 383.0)">
+    <rect x="737" y="359" width="96" height="48" rx="11.5" fill="#06121a"/>
+    <g clip-path="url(#pyr-top-180)">
+      <rect x="753.05" y="366.2" width="29.4" height="30.9" rx="7.2" fill="#0e3a47"/>
+      <rect x="754.25" y="367.4" width="27" height="28.5" rx="6" fill="#3fe0ff"/>
+      <circle cx="767.75" cy="400.73" r="17.94" fill="#06121a"/>
+      <rect x="787.55" y="366.2" width="29.4" height="30.9" rx="7.2" fill="#0e3a47"/>
+      <rect x="788.75" y="367.4" width="27" height="28.5" rx="6" fill="#3fe0ff"/>
+      <circle cx="802.25" cy="400.73" r="17.94" fill="#06121a"/>
+    </g>
+  </g>
+  <g transform="rotate(-90 697.0 295.0)">
+    <rect x="649" y="271" width="96" height="48" rx="11.5" fill="#06121a"/>
+    <g clip-path="url(#pyr-top-90)">
+      <rect x="665.05" y="278.2" width="29.4" height="30.9" rx="7.2" fill="#0e3a47"/>
+      <rect x="666.25" y="279.4" width="27" height="28.5" rx="6" fill="#3fe0ff"/>
+      <circle cx="679.75" cy="312.73" r="17.94" fill="#06121a"/>
+      <rect x="699.55" y="278.2" width="29.4" height="30.9" rx="7.2" fill="#0e3a47"/>
+      <rect x="700.75" y="279.4" width="27" height="28.5" rx="6" fill="#3fe0ff"/>
+      <circle cx="714.25" cy="312.73" r="17.94" fill="#06121a"/>
+    </g>
+  </g>
+  <g transform="rotate(-270 873.0 295.0)">
+    <rect x="825" y="271" width="96" height="48" rx="11.5" fill="#06121a"/>
+    <g clip-path="url(#pyr-top-270)">
+      <rect x="841.05" y="278.2" width="29.4" height="30.9" rx="7.2" fill="#0e3a47"/>
+      <rect x="842.25" y="279.4" width="27" height="28.5" rx="6" fill="#3fe0ff"/>
+      <circle cx="855.75" cy="312.73" r="17.94" fill="#06121a"/>
+      <rect x="875.55" y="278.2" width="29.4" height="30.9" rx="7.2" fill="#0e3a47"/>
+      <rect x="876.75" y="279.4" width="27" height="28.5" rx="6" fill="#3fe0ff"/>
+      <circle cx="890.25" cy="312.73" r="17.94" fill="#06121a"/>
+    </g>
+  </g>
+  <text x="785" y="466" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#5b6b7b" text-anchor="middle">Cuatro vistas con la parte de arriba hacia afuera</text>
+  <text x="785" y="484" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#5b6b7b" text-anchor="middle">(gmini_pi --layout pyramid o kiosk/?layout=pyramid)</text>
+  <line x1="32" y1="566" x2="968" y2="566" fill="none" stroke="#c9d1d9" stroke-width="1" stroke-linecap="round" />
+  <text x="32" y="586" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#5b6b7b" text-anchor="start">Plantillas de corte en hardware/templates/ (SVG y DXF por tamaño de pantalla)</text>
+  <text x="968" y="586" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#5b6b7b" text-anchor="end">G-Mini Home  |  CC BY-SA 4.0</text>
+</svg>

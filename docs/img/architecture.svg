@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Arquitectura de G-Mini Home">
+  <title>Arquitectura de G-Mini Home</title>
+  <desc>Dispositivos de G-Mini Home conectados al nucleo de G-Mini por la Remote API v1.</desc>
+  <defs>
+    <marker id="arch-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5b6b7b"/></marker>
+    <marker id="flow-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0b7285"/></marker>
+  </defs>
+  <rect x="0" y="0" width="1200" height="800" fill="#ffffff"/>
+  <text x="32" y="44" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="700" fill="#1d2733" text-anchor="start">Cómo se conecta todo</text>
+  <text x="32" y="68" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#5b6b7b" text-anchor="start">La carita escucha y muestra; el trabajo real corre en el núcleo de G-Mini (PC o servidor 24/7)</text>
+  <rect x="433" y="124" width="340" height="250" rx="16" fill="#000000" opacity="0.07"/>
+  <rect x="430" y="120" width="340" height="250" rx="16" fill="#0f2533"/>
+  <text x="454" y="156" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff" text-anchor="start">Núcleo G-Mini</text>
+  <text x="454" y="178" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#a9c2cf" text-anchor="start">Escritorio (Windows) o servidor 24/7 (Linux)</text>
+  <circle cx="460" cy="210" r="3" fill="#3fe0ff"/>
+  <text x="472" y="214" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="400" fill="#e6fbff" text-anchor="start">Agente, memoria, tareas y conectores</text>
+  <circle cx="460" cy="236" r="3" fill="#3fe0ff"/>
+  <text x="472" y="240" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="400" fill="#e6fbff" text-anchor="start">STT (Whisper) y TTS (voces neurales)</text>
+  <circle cx="460" cy="262" r="3" fill="#3fe0ff"/>
+  <text x="472" y="266" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="400" fill="#e6fbff" text-anchor="start">Remote API v1 en el puerto 8765</text>
+  <circle cx="460" cy="288" r="3" fill="#3fe0ff"/>
+  <text x="472" y="292" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="400" fill="#e6fbff" text-anchor="start">Tokens por dispositivo y aprobaciones</text>
+  <rect x="454" y="314" width="292" height="34" rx="8" fill="#16384a"/>
+  <text x="600" y="336" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="11.5" font-weight="400" fill="#3fe0ff" text-anchor="middle">REST  /api/v1/*      WebSocket  /api/v1/ws</text>
+  <rect x="43" y="114" width="300" height="150" rx="12" fill="#000000" opacity="0.06"/>
+  <rect x="40" y="110" width="300" height="150" rx="12" fill="#ffffff" stroke="#c9d1d9" stroke-width="1.2"/>
+  <rect x="40" y="110" width="5" height="150" rx="2.5" fill="#2563eb"/>
+  <text x="58" y="137" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1d2733" text-anchor="start">Cara USB</text>
+  <rect x="252" y="123.5" width="72.9" height="19.5" rx="9.75" fill="#e3f6f9"/>
+  <text x="288.45" y="137.5" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="600" fill="#0b7285" text-anchor="middle">variante 1</text>
+  <text x="58" y="160" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#5b6b7b" text-anchor="start">Arduino Uno/Nano + OLED</text>
+  <text x="58" y="178" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#5b6b7b" text-anchor="start">Protocolo serie a 115200</text>
+  <text x="58" y="196" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#5b6b7b" text-anchor="start">Voz con el micrófono de la PC</text>
+  <text x="58" y="246" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="600" fill="#2563eb" text-anchor="start">USB serie + puente Python</text>
+  <rect x="43" y="294" width="300" height="150" rx="12" fill="#000000" opacity="0.06"/>
+  <rect x="40" y="290" width="300" height="150" rx="12" fill="#ffffff" stroke="#c9d1d9" stroke-width="1.2"/>
+  <rect x="40" y="290" width="5" height="150" rx="2.5" fill="#7c3aed"/>
+  <text x="58" y="317" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1d2733" text-anchor="start">Compañero WiFi</text>
+  <rect x="252" y="303.5" width="72.9" height="19.5" rx="9.75" fill="#e3f6f9"/>
+  <text x="288.45" y="317.5" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="600" fill="#0b7285" text-anchor="middle">variante 2</text>
+  <text x="58" y="340" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#5b6b7b" text-anchor="start">ESP32-S3 + OLED o TFT</text>
+  <text x="58" y="358" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#5b6b7b" text-anchor="start">Micrófono I2S y parlante</text>
+  <text x="58" y="376" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#5b6b7b" text-anchor="start">Pulsar para hablar</text>
+  <text x="58" y="426" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="600" fill="#7c3aed" text-anchor="start">WiFi: REST + WebSocket</text>
+  <rect x="43" y="474" width="300" height="150" rx="12" fill="#000000" opacity="0.06"/>
+  <rect x="40" y="470" width="300" height="150" rx="12" fill="#ffffff" stroke="#c9d1d9" stroke-width="1.2"/>
+  <rect x="40" y="470" width="5" height="150" rx="2.5" fill="#059669"/>
+  <text x="58" y="497" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1d2733" text-anchor="start">Parlante con LEDs</text>
+  <rect x="252" y="483.5" width="72.9" height="19.5" rx="9.75" fill="#e3f6f9"/>
+  <text x="288.45" y="497.5" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="600" fill="#0b7285" text-anchor="middle">variante 3</text>
+  <text x="58" y="520" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#5b6b7b" text-anchor="start">ESP32 sin pantalla</text>
+  <text x="58" y="538" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#5b6b7b" text-anchor="start">La cara es el anillo LED</text>
+  <text x="58" y="556" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#5b6b7b" text-anchor="start">'Oye G-Mini' opcional</text>
+  <text x="58" y="606" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="600" fill="#059669" text-anchor="start">WiFi: voice/wake + turn</text>
+  <rect x="863" y="114" width="300" height="150" rx="12" fill="#000000" opacity="0.06"/>
+  <rect x="860" y="110" width="300" height="150" rx="12" fill="#ffffff" stroke="#c9d1d9" stroke-width="1.2"/>
+  <rect x="860" y="110" width="5" height="150" rx="2.5" fill="#c2410c"/>
+  <text x="878" y="137" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1d2733" text-anchor="start">Raspberry Pi</text>
+  <rect x="1072" y="123.5" width="72.9" height="19.5" rx="9.75" fill="#e3f6f9"/>
+  <text x="1108.45" y="137.5" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="600" fill="#0b7285" text-anchor="middle">variante 4</text>
+  <text x="878" y="160" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#5b6b7b" text-anchor="start">Cara a pantalla completa</text>
+  <text x="878" y="178" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#5b6b7b" text-anchor="start">Botón GPIO o teclado</text>
+  <text x="878" y="196" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#5b6b7b" text-anchor="start">Servicio systemd</text>
+  <text x="878" y="246" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="600" fill="#c2410c" text-anchor="start">LAN: REST + WebSocket</text>
+  <rect x="863" y="294" width="300" height="150" rx="12" fill="#000000" opacity="0.06"/>
+  <rect x="860" y="290" width="300" height="150" rx="12" fill="#ffffff" stroke="#c9d1d9" stroke-width="1.2"/>
+  <rect x="860" y="290" width="5" height="150" rx="2.5" fill="#a61e4d"/>
+  <text x="878" y="317" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1d2733" text-anchor="start">PC vieja o tablet</text>
+  <rect x="1072" y="303.5" width="72.9" height="19.5" rx="9.75" fill="#e3f6f9"/>
+  <text x="1108.45" y="317.5" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="600" fill="#0b7285" text-anchor="middle">variante 5</text>
+  <text x="878" y="340" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#5b6b7b" text-anchor="start">El mismo cliente de la Pi</text>
+  <text x="878" y="358" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#5b6b7b" text-anchor="start">o la página de kiosco</text>
+  <text x="878" y="376" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#5b6b7b" text-anchor="start">en el navegador</text>
+  <text x="878" y="426" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="600" fill="#a61e4d" text-anchor="start">estado por SSE</text>
+  <rect x="863" y="474" width="300" height="150" rx="12" fill="#000000" opacity="0.06"/>
+  <rect x="860" y="470" width="300" height="150" rx="12" fill="#ffffff" stroke="#c9d1d9" stroke-width="1.2"/>
+  <rect x="860" y="470" width="5" height="150" rx="2.5" fill="#0891b2"/>
+  <text x="878" y="497" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" font-weight="700" fill="#1d2733" text-anchor="start">Hologramas</text>
+  <rect x="1078.2" y="483.5" width="66.81" height="19.5" rx="9.75" fill="#e3f6f9"/>
+  <text x="1111.61" y="497.5" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="600" fill="#0b7285" text-anchor="middle">pantallas</text>
+  <text x="878" y="520" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#5b6b7b" text-anchor="start">Pirámide o caja de Pepper</text>
+  <text x="878" y="538" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#5b6b7b" text-anchor="start">Niebla, LCD transparente,</text>
+  <text x="878" y="556" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#5b6b7b" text-anchor="start">ventilador POV...</text>
+  <text x="878" y="606" font-family="'JetBrains Mono', 'Cascadia Mono', Consolas, 'DejaVu Sans Mono', monospace" font-size="10.5" font-weight="600" fill="#0891b2" text-anchor="start">usa las caras de 4 y 5</text>
+  <line x1="344" y1="185" x2="426" y2="170" fill="none" stroke="#5b6b7b" stroke-width="1.8" stroke-linecap="butt" marker-end="url(#arch-arrow)" marker-start="url(#arch-arrow)"/>
+  <line x1="344" y1="365" x2="426" y2="250" fill="none" stroke="#5b6b7b" stroke-width="1.8" stroke-linecap="butt" marker-end="url(#arch-arrow)" marker-start="url(#arch-arrow)"/>
+  <line x1="344" y1="545" x2="426" y2="330" fill="none" stroke="#5b6b7b" stroke-width="1.8" stroke-linecap="butt" marker-end="url(#arch-arrow)" marker-start="url(#arch-arrow)"/>
+  <line x1="856" y1="185" x2="774" y2="170" fill="none" stroke="#5b6b7b" stroke-width="1.8" stroke-linecap="butt" marker-end="url(#arch-arrow)" marker-start="url(#arch-arrow)"/>
+  <line x1="856" y1="365" x2="774" y2="280" fill="none" stroke="#5b6b7b" stroke-width="1.8" stroke-dasharray="6 5" stroke-linecap="butt" marker-end="url(#arch-arrow)" marker-start="url(#arch-arrow)"/>
+  <line x1="1010" y1="466" x2="1010" y2="444" fill="none" stroke="#5b6b7b" stroke-width="1.8" stroke-dasharray="6 5" stroke-linecap="butt" marker-end="url(#arch-arrow)" marker-start="url(#arch-arrow)"/>
+  <text x="40" y="678" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#1d2733" text-anchor="start">Un turno de voz</text>
+  <rect x="40" y="696" width="166" height="40" rx="20" fill="#e3f6f9" stroke="#c9d1d9" stroke-width="1"/>
+  <text x="123" y="720" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1d2733" text-anchor="middle">Botón o 'Oye G-Mini'</text>
+  <line x1="208" y1="716" x2="224" y2="716" fill="none" stroke="#0b7285" stroke-width="1.8" stroke-linecap="butt" marker-end="url(#flow-arrow)"/>
+  <rect x="226" y="696" width="166" height="40" rx="20" fill="#ffffff" stroke="#c9d1d9" stroke-width="1"/>
+  <text x="309" y="720" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1d2733" text-anchor="middle">Graba WAV 16 kHz</text>
+  <line x1="394" y1="716" x2="410" y2="716" fill="none" stroke="#0b7285" stroke-width="1.8" stroke-linecap="butt" marker-end="url(#flow-arrow)"/>
+  <rect x="412" y="696" width="166" height="40" rx="20" fill="#e3f6f9" stroke="#c9d1d9" stroke-width="1"/>
+  <text x="495" y="720" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1d2733" text-anchor="middle">POST /voice/turn</text>
+  <line x1="580" y1="716" x2="596" y2="716" fill="none" stroke="#0b7285" stroke-width="1.8" stroke-linecap="butt" marker-end="url(#flow-arrow)"/>
+  <rect x="598" y="696" width="166" height="40" rx="20" fill="#ffffff" stroke="#c9d1d9" stroke-width="1"/>
+  <text x="681" y="720" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1d2733" text-anchor="middle">STT -&gt; agente -&gt; TTS</text>
+  <line x1="766" y1="716" x2="782" y2="716" fill="none" stroke="#0b7285" stroke-width="1.8" stroke-linecap="butt" marker-end="url(#flow-arrow)"/>
+  <rect x="784" y="696" width="166" height="40" rx="20" fill="#e3f6f9" stroke="#c9d1d9" stroke-width="1"/>
+  <text x="867" y="720" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1d2733" text-anchor="middle">JSON + audio base64</text>
+  <line x1="952" y1="716" x2="968" y2="716" fill="none" stroke="#0b7285" stroke-width="1.8" stroke-linecap="butt" marker-end="url(#flow-arrow)"/>
+  <rect x="970" y="696" width="166" height="40" rx="20" fill="#ffffff" stroke="#c9d1d9" stroke-width="1"/>
+  <text x="1053" y="720" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1d2733" text-anchor="middle">Habla y anima la boca</text>
+  <line x1="32" y1="766" x2="1168" y2="766" fill="none" stroke="#c9d1d9" stroke-width="1" stroke-linecap="round" />
+  <text x="32" y="786" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#5b6b7b" text-anchor="start">Generado por tools/diagrams/architecture.py  |  contrato: docs/protocol/remote-api-v1.md del repo principal</text>
+  <text x="1168" y="786" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#5b6b7b" text-anchor="end">G-Mini Home  |  CC BY-SA 4.0</text>
+</svg>

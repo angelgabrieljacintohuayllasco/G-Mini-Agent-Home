@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="600" viewBox="0 0 1000 600" role="img" aria-label="Ventilador holográfico POV">
+  <title>Ventilador holográfico POV</title>
+  <desc>Aspas con LEDs que giran y dibujan la imagen por persistencia.</desc>
+  <defs>
+    <clipPath id="pov-ghost"><rect x="324" y="282" width="192" height="96" rx="13"/></clipPath>
+  </defs>
+  <rect x="0" y="0" width="1000" height="600" fill="#ffffff"/>
+  <text x="32" y="44" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="700" fill="#1d2733" text-anchor="start">Ventilador holográfico (POV)</text>
+  <text x="32" y="68" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#5b6b7b" text-anchor="start">Aspas con tiras de LEDs giran a ~700 RPM; el controlador enciende cada LED en el momento justo</text>
+  <circle cx="420" cy="330" r="208" fill="none" stroke="#9aa8b2" stroke-width="2" stroke-dasharray="3 6"/>
+  <line x1="420" y1="330" x2="598.54" y2="394.98" fill="none" stroke="#2f3b44" stroke-width="12" stroke-linecap="round" />
+  <circle cx="439.84" cy="337.22" r="3.2" fill="#3fe0ff"/>
+  <circle cx="459.68" cy="344.44" r="3.2" fill="#3fe0ff"/>
+  <circle cx="479.51" cy="351.66" r="3.2" fill="#3fe0ff"/>
+  <circle cx="499.35" cy="358.88" r="3.2" fill="#3fe0ff"/>
+  <circle cx="519.19" cy="366.1" r="3.2" fill="#3fe0ff"/>
+  <circle cx="539.03" cy="373.32" r="3.2" fill="#3fe0ff"/>
+  <circle cx="558.87" cy="380.54" r="3.2" fill="#3fe0ff"/>
+  <circle cx="578.7" cy="387.76" r="3.2" fill="#3fe0ff"/>
+  <line x1="420" y1="330" x2="355.02" y2="508.54" fill="none" stroke="#2f3b44" stroke-width="12" stroke-linecap="round" />
+  <circle cx="412.78" cy="349.84" r="3.2" fill="#3fe0ff"/>
+  <circle cx="405.56" cy="369.68" r="3.2" fill="#3fe0ff"/>
+  <circle cx="398.34" cy="389.51" r="3.2" fill="#3fe0ff"/>
+  <circle cx="391.12" cy="409.35" r="3.2" fill="#3fe0ff"/>
+  <circle cx="383.9" cy="429.19" r="3.2" fill="#3fe0ff"/>
+  <circle cx="376.68" cy="449.03" r="3.2" fill="#3fe0ff"/>
+  <circle cx="369.46" cy="468.87" r="3.2" fill="#3fe0ff"/>
+  <circle cx="362.24" cy="488.7" r="3.2" fill="#3fe0ff"/>
+  <line x1="420" y1="330" x2="241.46" y2="265.02" fill="none" stroke="#2f3b44" stroke-width="12" stroke-linecap="round" />
+  <circle cx="400.16" cy="322.78" r="3.2" fill="#3fe0ff"/>
+  <circle cx="380.32" cy="315.56" r="3.2" fill="#3fe0ff"/>
+  <circle cx="360.49" cy="308.34" r="3.2" fill="#3fe0ff"/>
+  <circle cx="340.65" cy="301.12" r="3.2" fill="#3fe0ff"/>
+  <circle cx="320.81" cy="293.9" r="3.2" fill="#3fe0ff"/>
+  <circle cx="300.97" cy="286.68" r="3.2" fill="#3fe0ff"/>
+  <circle cx="281.13" cy="279.46" r="3.2" fill="#3fe0ff"/>
+  <circle cx="261.3" cy="272.24" r="3.2" fill="#3fe0ff"/>
+  <line x1="420" y1="330" x2="484.98" y2="151.46" fill="none" stroke="#2f3b44" stroke-width="12" stroke-linecap="round" />
+  <circle cx="427.22" cy="310.16" r="3.2" fill="#3fe0ff"/>
+  <circle cx="434.44" cy="290.32" r="3.2" fill="#3fe0ff"/>
+  <circle cx="441.66" cy="270.49" r="3.2" fill="#3fe0ff"/>
+  <circle cx="448.88" cy="250.65" r="3.2" fill="#3fe0ff"/>
+  <circle cx="456.1" cy="230.81" r="3.2" fill="#3fe0ff"/>
+  <circle cx="463.32" cy="210.97" r="3.2" fill="#3fe0ff"/>
+  <circle cx="470.54" cy="191.13" r="3.2" fill="#3fe0ff"/>
+  <circle cx="477.76" cy="171.3" r="3.2" fill="#3fe0ff"/>
+  <circle cx="420" cy="330" r="26" fill="#1b2631"/>
+  <g opacity="0.55">
+    <rect x="324" y="282" width="192" height="96" rx="13" fill="#e8fbff"/>
+    <g clip-path="url(#pov-ghost)">
+      <circle cx="375.99" cy="321.97" r="13.39" fill="#ff4d6d"/>
+      <circle cx="399" cy="321.97" r="13.39" fill="#ff4d6d"/>
+      <polygon points="363,325.32 411.99,325.32 387.49,353.62" fill="#ff4d6d" stroke="#ff4d6d" stroke-width="0.6" stroke-linejoin="round" />
+      <circle cx="441" cy="321.97" r="13.39" fill="#ff4d6d"/>
+      <circle cx="464.01" cy="321.97" r="13.39" fill="#ff4d6d"/>
+      <polygon points="428.01,325.32 477,325.32 452.51,353.62" fill="#ff4d6d" stroke="#ff4d6d" stroke-width="0.6" stroke-linejoin="round" />
+    </g>
+  </g>
+  <rect x="320" y="278" width="200" height="104" rx="10" fill="none" stroke="#0ea5c6" stroke-width="1.2" stroke-dasharray="4 4"/>
+  <rect x="680" y="160" width="290" height="79.8" rx="8" fill="#fff0f0" stroke="#c92a2a" stroke-width="1"/>
+  <rect x="680" y="160" width="4" height="79.8" rx="2" fill="#c92a2a"/>
+  <text x="694" y="179" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" fill="#c92a2a" text-anchor="start">Aspas en movimiento</text>
+  <text x="694" y="194.95" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#1d2733" text-anchor="start">Las aspas giran rápido: usa la carcasa</text>
+  <text x="694" y="210.9" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#1d2733" text-anchor="start">o cúpula protectora y fíjalo firme</text>
+  <text x="694" y="226.85" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#1d2733" text-anchor="start">a la pared o a un soporte pesado.</text>
+  <line x1="466.79" y1="201.45" x2="700" y2="330" fill="none" stroke="#5b6b7b" stroke-width="1" stroke-linecap="round" />
+  <circle cx="466.79" cy="201.45" r="2.6" fill="#1d2733"/>
+  <text x="706" y="334" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#1d2733" text-anchor="start">Tiras de LEDs en las aspas</text>
+  <text x="706" y="351" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#5b6b7b" text-anchor="start">controlador con WiFi propio</text>
+  <line x1="420" y1="330" x2="700" y2="400" fill="none" stroke="#5b6b7b" stroke-width="1" stroke-linecap="round" />
+  <circle cx="420" cy="330" r="2.6" fill="#1d2733"/>
+  <text x="706" y="404" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#1d2733" text-anchor="start">Eje y sensor de posición</text>
+  <text x="706" y="421" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#5b6b7b" text-anchor="start">sincroniza cada vuelta</text>
+  <line x1="32" y1="566" x2="968" y2="566" fill="none" stroke="#c9d1d9" stroke-width="1" stroke-linecap="round" />
+  <text x="32" y="586" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#5b6b7b" text-anchor="start">Se compra hecho (20-50 cm); G-Mini Home le envía caras como video o GIF desde su app</text>
+  <text x="968" y="586" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#5b6b7b" text-anchor="end">G-Mini Home  |  CC BY-SA 4.0</text>
+</svg>

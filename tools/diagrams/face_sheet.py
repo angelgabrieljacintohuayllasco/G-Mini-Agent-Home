@@ -111,7 +111,8 @@ def build_expressions(path: Path) -> bool:
     height = top + rows * row_h + 40
     svg = Svg(width, height, title="Expresiones de G-Mini Home",
               desc="Las nueve emociones del protocolo dibujadas con el motor de ojos.")
-    svg.heading("Expresiones", "Emociones del protocolo (campo emotion) dibujadas con el motor real, en un lienzo de 128 x 64")
+    svg.heading("Expresiones",
+                "Emociones del protocolo (campo emotion) dibujadas con el motor real, en un lienzo de 128 x 64")
     for i, emotion in enumerate(EMOTIONS):
         col, row = i % cols, i // cols
         x = 40 + col * (cell_w + gap)
@@ -142,6 +143,7 @@ def build_states(path: Path) -> bool:
         svg.text(x, top + cell_h + 30, label, size=14, weight=700, fill=INK)
         svg.text(x, top + cell_h + 48, proto, size=11.5, fill=MUTED, family=FONT_MONO)
     svg.line(40, height - 34, width - 40, height - 34, stroke=LINE, sw=1)
-    svg.text(40, height - 14, "En speaking la boca sigue el volumen del audio; en acting la mirada barre de lado a lado.",
+    svg.text(40, height - 14,
+             "En speaking la boca sigue el volumen del audio; en acting la mirada barre de lado a lado.",
              size=11, fill=MUTED)
     return svg.save(path)

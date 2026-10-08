@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="600" viewBox="0 0 1000 600" role="img" aria-label="Retroproyección en film o tul holográfico">
+  <title>Retroproyección en film o tul holográfico</title>
+  <desc>Lamina casi transparente que recibe la proyeccion en una caja oscura.</desc>
+  <defs>
+    <clipPath id="gauze-ghost"><rect x="300" y="260" width="179.2" height="89.6" rx="12.8"/></clipPath>
+    <marker id="ray-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0ea5c6"/></marker>
+  </defs>
+  <rect x="0" y="0" width="1000" height="600" fill="#ffffff"/>
+  <text x="32" y="44" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="700" fill="#1d2733" text-anchor="start">Film holográfico o tul (holo-gauze)</text>
+  <text x="32" y="68" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#5b6b7b" text-anchor="start">Una lámina casi invisible capta la luz del proyector; con fondo negro la imagen parece suspendida</text>
+  <rect x="120" y="140" width="760" height="360" rx="10" fill="#0c1318"/>
+  <rect x="430" y="160" width="10" height="320" fill="#bfe9f5" opacity="0.55"/>
+  <text x="435" y="520" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#5b6b7b" text-anchor="middle">film o tul tensado</text>
+  <g opacity="0.55">
+    <rect x="300" y="260" width="179.2" height="89.6" rx="12.8" fill="#e8fbff"/>
+    <g clip-path="url(#gauze-ghost)">
+      <rect x="329.96" y="277.36" width="54.88" height="54.88" rx="13.44" fill="#bdeff9"/>
+      <rect x="332.2" y="279.6" width="50.4" height="50.4" rx="11.2" fill="#3fe0ff"/>
+      <rect x="394.36" y="277.36" width="54.88" height="54.88" rx="13.44" fill="#bdeff9"/>
+      <rect x="396.6" y="279.6" width="50.4" height="50.4" rx="11.2" fill="#3fe0ff"/>
+    </g>
+  </g>
+  <rect x="296" y="256" width="187.2" height="97.6" rx="10" fill="none" stroke="#0ea5c6" stroke-width="1.2" stroke-dasharray="4 4"/>
+  <rect x="700" y="330" width="90" height="50" rx="8" fill="#2f3b44"/>
+  <circle cx="700" cy="355" r="14" fill="#9fe7f7"/>
+  <line x1="686" y1="355" x2="446" y2="300" fill="none" stroke="#0ea5c6" stroke-width="1.6" stroke-dasharray="6 4" stroke-linecap="butt" marker-end="url(#ray-arrow)"/>
+  <line x1="686" y1="355" x2="446" y2="400" fill="none" stroke="#0ea5c6" stroke-width="1.6" stroke-dasharray="6 4" stroke-linecap="butt" marker-end="url(#ray-arrow)"/>
+  <text x="745" y="400" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#5b6b7b" text-anchor="middle">proyector (de frente o trasero)</text>
+  <ellipse cx="70" cy="330" rx="20" ry="12" fill="#ffffff" stroke="#1d2733" stroke-width="1.6"/>
+  <circle cx="76" cy="330" r="6.5" fill="#0b7285"/>
+  <circle cx="76" cy="330" r="2.6" fill="#1d2733"/>
+  <text x="70" y="362" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#5b6b7b" text-anchor="middle">observador</text>
+  <text x="140" y="560" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#1d2733" text-anchor="start">Fondo y paredes en negro mate; ilumina al presentador por los lados para que la luz no toque el film.</text>
+  <line x1="32" y1="566" x2="968" y2="566" fill="none" stroke="#c9d1d9" stroke-width="1" stroke-linecap="round" />
+  <text x="32" y="586" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#5b6b7b" text-anchor="start">El efecto de escenario de los conciertos con 'hologramas' (tul o lámina tipo Musion)</text>
+  <text x="968" y="586" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#5b6b7b" text-anchor="end">G-Mini Home  |  CC BY-SA 4.0</text>
+</svg>
