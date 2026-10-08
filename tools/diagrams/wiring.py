@@ -417,7 +417,8 @@ def render(d: Diagram, path: Path) -> bool:
             board_taps.add((w["lane"], w["by"]))
         hline(w["lane"], w["mx"], w["my"], color, w["lane"])
     # Puntos de union donde un carril reparte a varios modulos.
-    for side, net in {(w["side"], w["net"]) for w in wires}:
+    # dict.fromkeys y no un set: el orden de un set de cadenas cambia con PYTHONHASHSEED.
+    for side, net in dict.fromkeys((w["side"], w["net"]) for w in wires):
         group = [w for w in wires if w["net"] == net and w["side"] == side]
         if len(group) > 1:
             lane = group[0]["lane"]
