@@ -5,6 +5,13 @@ el proyecto sigue [versionado semántico](https://semver.org/lang/es/).
 
 ## [Sin publicar]
 
+## [0.1.1] - 2026-10-08
+
+### Cambiado
+
+- Firmware ESP32 0.1.1: el portal WiFi queda entero en español. Los menús, botones y mensajes
+  de WiFiManager usan una traducción propia (`include/gmini_wm_strings_es.h`).
+
 ## [0.1.0] - 2026-10-08
 
 Primera versión.
@@ -41,4 +48,5 @@ Primera versión.
 - CI (firmware, pruebas, archivos generados y OpenSCAD) y release por etiqueta.
 
 [Sin publicar]: https://github.com/angelgabrieljacintohuayllasco/G-Mini-Agent-Home/compare/v0.1.0...HEAD
+[0.1.1]: https://github.com/angelgabrieljacintohuayllasco/G-Mini-Agent-Home/releases/tag/v0.1.1
 [0.1.0]: https://github.com/angelgabrieljacintohuayllasco/G-Mini-Agent-Home/releases/tag/v0.1.0
