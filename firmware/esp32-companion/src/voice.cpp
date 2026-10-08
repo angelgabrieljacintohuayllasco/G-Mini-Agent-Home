@@ -75,6 +75,12 @@ void runTurn(const int16_t* pcm, size_t samples) {
     ui::setActivity(gmini::Activity::Idle);
     ui::setEmotion(gmini::Emotion::Thinking);
     ui::caption("No te escuché bien", 3500);
+  } else if (!result.reply[0]) {
+    // Te entendio pero el agente no contesto (proveedor de IA caido o sin configurar).
+    ui::setActivity(gmini::Activity::Idle);
+    ui::setEmotion(gmini::Emotion::Sad);
+    ui::caption("G-Mini no respondió", 4000);
+    log_w("voz: sin respuesta para \"%s\"", result.transcript);
   } else {
     if (result.sessionId[0]) strlcpy(gSessionId, result.sessionId, sizeof(gSessionId));
     applyEmotion(result.emotion);
