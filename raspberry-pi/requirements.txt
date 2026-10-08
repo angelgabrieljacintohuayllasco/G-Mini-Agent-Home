@@ -1,0 +1,8 @@
+httpx>=0.27,<1
+websockets>=13,<16
+pygame>=2.5,<3
+sounddevice>=0.4.6,<1
+# Botones GPIO en Raspberry Pi (lgpio funciona en Pi 5 y en Bookworm).
+gpiozero>=2.0; platform_machine == "aarch64" or platform_machine == "armv7l"
+lgpio>=0.2; platform_machine == "aarch64" or platform_machine == "armv7l"
+# Opcional, palabra de activacion local:  pip install openwakeword

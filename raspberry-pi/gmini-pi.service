@@ -1,0 +1,30 @@
+[Unit]
+Description=G-Mini Home (cara y voz)
+Documentation=https://github.com/angelgabrieljacintohuayllasco/G-Mini-Agent-Home
+Wants=network-online.target sound.target
+After=network-online.target sound.target
+
+[Service]
+Type=simple
+User=@USER@
+Group=@USER@
+SupplementaryGroups=audio video input gpio render
+WorkingDirectory=/opt/gmini-home
+Environment=PYTHONPATH=/opt/gmini-home
+Environment=GMINI_PI_CONFIG=/etc/gmini-home/config.toml
+Environment=GMINI_HOME_CONFIG=/var/lib/gmini-home
+Environment=PYTHONUNBUFFERED=1
+# Sin escritorio (Raspberry Pi OS Lite) pygame dibuja con KMS/DRM.
+Environment=SDL_VIDEODRIVER=@SDL_DRIVER@
+ExecStart=/opt/gmini-home/venv/bin/python -m gmini_pi
+Restart=on-failure
+RestartSec=5
+# Endurecimiento: el servicio solo escribe en su carpeta de estado.
+NoNewPrivileges=yes
+ProtectSystem=full
+ProtectHome=read-only
+ReadWritePaths=/var/lib/gmini-home
+PrivateTmp=yes
+
+[Install]
+WantedBy=multi-user.target

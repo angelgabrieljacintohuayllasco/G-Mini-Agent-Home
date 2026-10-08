@@ -1,0 +1,40 @@
+# Configuracion de la pantalla G-Mini Home.
+# install.sh la copia a /etc/gmini-home/config.toml (no se sobrescribe al actualizar).
+
+[server]
+# G-Mini en modo servidor (o el escritorio con conexiones de la red local activadas).
+url = "http://192.168.1.50:8765"
+device_name = "Pantalla de la sala"
+
+[display]
+fullscreen = true
+width = 0            # 0 = resolucion nativa de la pantalla
+height = 0
+fps = 30             # Pi Zero 2 W: 20-24; Pi 4/5: 30-60
+layout = "normal"    # normal | mirror (caja de Pepper) | pyramid (piramide de 4 caras)
+rotate = 0           # 0, 90, 180 o 270 (pantallas montadas de costado)
+supersample = 1      # 2 = bordes suaves; cuesta CPU (no usar en Pi Zero)
+captions = true
+hide_cursor = true
+
+[audio]
+enabled = true
+input = ""           # indice o nombre; lista: /opt/gmini-home/venv/bin/python -m gmini_pi --list-audio
+output = ""
+volume = 80
+chimes = true        # tono corto al empezar a escuchar
+
+[buttons]
+gpio_talk = 17       # BCM. Boton entre el GPIO y GND (pull-up interno). 0 = sin boton
+gpio_cancel = 27
+keyboard = true      # espacio = hablar, C = cancelar, F = pantalla completa, Esc = salir
+
+[wake]
+mode = "off"         # off | server ("Oye G-Mini" detectado por G-Mini) | openwakeword (modelo local)
+model = ""           # ruta al modelo .onnx o .tflite para openwakeword
+threshold = 0.5
+
+[kiosk]
+# Pagina para tablets o PCs viejas: http://<esta-ip>:8088
+enabled = false
+listen = "127.0.0.1:8088"   # "0.0.0.0:8088" para verla desde otros equipos de la red

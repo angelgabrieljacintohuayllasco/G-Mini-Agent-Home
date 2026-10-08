@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#000000">
+  <title>G-Mini Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="face" aria-label="Cara de G-Mini"></canvas>
+  <section id="text" aria-live="polite">
+    <h1 id="title"></h1>
+    <p id="caption"></p>
+  </section>
+  <div id="status" hidden>Sin conexión con la pantalla de G-Mini</div>
+  <button id="enter" type="button">Tocar para pantalla completa</button>
+  <script src="presets.js"></script>
+  <script src="face.js"></script>
+  <script>
+    "use strict";
+    // Parametros: ?layout=normal|mirror|pyramid  ?demo=1
+    const params = new URLSearchParams(location.search);
+    const layout = ["mirror", "pyramid"].includes(params.get("layout")) ? params.get("layout") : "normal";
+    const demo = params.get("demo") === "1";
+    const canvas = document.getElementById("face");
+    const ctx = canvas.getContext("2d");
+    const titleEl = document.getElementById("title");
+    const captionEl = document.getElementById("caption");
+    const statusEl = document.getElementById("status");
+    const enterBtn = document.getElementById("enter");
+    const eyes = new GMiniFace.Eyes(Date.now() & 0xffffffff);
+    let state = { status: "idle", emotion: "neutral", caption: "", level: 0, notify: null };
+
+    function resize() {
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = Math.round(innerWidth * dpr);
+      canvas.height = Math.round(innerHeight * dpr);
+    }
+    addEventListener("resize", resize);
+    resize();
+
+    function apply(next) {
+      state = Object.assign(state, next);
+      eyes.setEmotion(state.emotion);
+      eyes.setActivity(state.status);
+      eyes.setLevel(state.level || 0);
+      const n = state.notify;
+      titleEl.textContent = n ? n.title : "";
+      captionEl.textContent = n ? n.body : (state.caption || "");
+      document.body.classList.toggle("has-text", Boolean(titleEl.textContent || captionEl.textContent));
+    }
+
+    function drawView(cx, cy, size, angle, flip) {
+      const scale = size / GMiniFace.REF_W;
+      ctx.save();
+      ctx.translate(cx, cy);
+      ctx.rotate(angle);
+      ctx.scale(flip ? -scale : scale, scale);
+      ctx.translate(-GMiniFace.REF_W / 2, -GMiniFace.REF_H / 2);
+      GMiniFace.drawFace(ctx, eyes.frame, { glow: 6 });
+      ctx.restore();
+    }
+
+    function frame(now) {
+      eyes.update(now);
+      ctx.fillStyle = GMINI_PRESETS.colors.background;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      const w = canvas.width;
+      const h = canvas.height;
+      if (layout === "pyramid") {
+        // Cuatro vistas con la parte de arriba de la cara hacia afuera.
+        const side = Math.min(w, h) / 3;
+        drawView(w / 2, h / 2 - side, side, 0, true);
+        drawView(w / 2, h / 2 + side, side, Math.PI, true);
+        drawView(w / 2 - side, h / 2, side, -Math.PI / 2, true);
+        drawView(w / 2 + side, h / 2, side, Math.PI / 2, true);
+      } else {
+        const textH = document.body.classList.contains("has-text") ? h * 0.28 : 0;
+        const size = Math.min(w * 0.9, (h - textH) * 0.9 * 2);
+        drawView(w / 2, (h - textH) / 2, size, 0, layout === "mirror");
+      }
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+    if (layout === "mirror") document.body.classList.add("mirror");
+    if (layout === "pyramid") document.body.classList.add("pyramid");
+
+    async function goFullscreen() {
+      try { await document.documentElement.requestFullscreen(); } catch (e) { /* no disponible */ }
+      try { await navigator.wakeLock.request("screen"); } catch (e) { /* no disponible */ }
+      enterBtn.hidden = true;
+    }
+    enterBtn.addEventListener("click", goFullscreen);
+
+    if (demo) {
+      const emotions = Object.keys(GMINI_PRESETS.emotions);
+      let i = 0;
+      setInterval(() => {
+        apply({ emotion: emotions[i % emotions.length], status: "idle", caption: "" });
+        i += 1;
+      }, 2500);
+    } else {
+      const events = new EventSource("events");
+      events.onmessage = (e) => { statusEl.hidden = true; apply(JSON.parse(e.data)); };
+      events.onerror = () => { statusEl.hidden = false; };
+    }
+  </script>
+</body>
+</html>
