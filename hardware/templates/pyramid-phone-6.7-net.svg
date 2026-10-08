@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="186.0mm" height="171.8mm" viewBox="0 0 186.00 171.78">
+  <title>Pirámide de Pepper - Teléfono 6,7"</title>
+  <rect x="0" y="0" width="186.00" height="171.78" fill="#ffffff"/>
+  <text x="12.0" y="16.0" font-family="Arial, sans-serif" font-size="5" font-weight="700" fill="#1d2733">Pirámide de Pepper - Teléfono 6,7"</text>
+  <text x="12.0" y="23.0" font-family="Arial, sans-serif" font-size="3.2" fill="#5b6b7b">Lado mayor b = 66 mm, lado menor a = 11 mm, alto del trapecio = 38.9 mm, altura = 27.5 mm</text>
+  <text x="12.0" y="28.5" font-family="Arial, sans-serif" font-size="3.2" fill="#5b6b7b">Rojo: cortar. Azul punteado: marcar y doblar. Material: PET o acetato de 0,5 mm.</text>
+  <text x="12.0" y="34.0" font-family="Arial, sans-serif" font-size="3.2" fill="#5b6b7b">Imprime al 100 % (sin ajustar a la página) y mide la regla antes de cortar.</text>
+  <line x1="12.0" y1="39.0" x2="62.0" y2="39.0" stroke="#1d2733" stroke-width="0.4"/>
+  <text x="64.0" y="40.0" font-family="Arial, sans-serif" font-size="3" fill="#1d2733">50 mm</text>
+  <line x1="79.89" y1="99.90" x2="90.47" y2="96.91" stroke="#d64545" stroke-width="0.3"/>
+  <line x1="42.84" y1="69.96" x2="106.35" y2="52.00" stroke="#d64545" stroke-width="0.3"/>
+  <line x1="90.47" y1="96.91" x2="96.82" y2="105.89" stroke="#d64545" stroke-width="0.3"/>
+  <line x1="106.35" y1="52.00" x2="144.45" y2="105.89" stroke="#d64545" stroke-width="0.3"/>
+  <line x1="96.82" y1="105.89" x2="90.47" y2="114.87" stroke="#d64545" stroke-width="0.3"/>
+  <line x1="144.45" y1="105.89" x2="106.35" y2="159.78" stroke="#d64545" stroke-width="0.3"/>
+  <line x1="90.47" y1="114.87" x2="79.89" y2="111.88" stroke="#d64545" stroke-width="0.3"/>
+  <line x1="106.35" y1="159.78" x2="42.84" y2="141.81" stroke="#d64545" stroke-width="0.3"/>
+  <line x1="79.89" y1="99.90" x2="42.84" y2="69.96" stroke="#d64545" stroke-width="0.3"/>
+  <line x1="79.89" y1="111.88" x2="71.13" y2="108.67" stroke="#d64545" stroke-width="0.3"/>
+  <line x1="71.13" y1="108.67" x2="41.55" y2="132.58" stroke="#d64545" stroke-width="0.3"/>
+  <line x1="41.55" y1="132.58" x2="42.84" y2="141.81" stroke="#d64545" stroke-width="0.3"/>
+  <line x1="90.47" y1="96.91" x2="106.35" y2="52.00" stroke="#2563eb" stroke-width="0.3" stroke-dasharray="2 1.5"/>
+  <line x1="96.82" y1="105.89" x2="144.45" y2="105.89" stroke="#2563eb" stroke-width="0.3" stroke-dasharray="2 1.5"/>
+  <line x1="90.47" y1="114.87" x2="106.35" y2="159.78" stroke="#2563eb" stroke-width="0.3" stroke-dasharray="2 1.5"/>
+  <line x1="79.89" y1="111.88" x2="42.84" y2="141.81" stroke="#2563eb" stroke-width="0.3" stroke-dasharray="2 1.5"/>
+</svg>
