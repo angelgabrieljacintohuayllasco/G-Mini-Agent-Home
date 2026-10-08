@@ -47,6 +47,6 @@ Primera versión.
   hologramas, seguridad, solución de problemas y preguntas frecuentes.
 - CI (firmware, pruebas, archivos generados y OpenSCAD) y release por etiqueta.
 
-[Sin publicar]: https://github.com/angelgabrieljacintohuayllasco/G-Mini-Agent-Home/compare/v0.1.0...HEAD
+[Sin publicar]: https://github.com/angelgabrieljacintohuayllasco/G-Mini-Agent-Home/compare/v0.1.1...HEAD
 [0.1.1]: https://github.com/angelgabrieljacintohuayllasco/G-Mini-Agent-Home/releases/tag/v0.1.1
 [0.1.0]: https://github.com/angelgabrieljacintohuayllasco/G-Mini-Agent-Home/releases/tag/v0.1.0
