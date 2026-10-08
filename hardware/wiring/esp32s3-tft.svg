@@ -220,8 +220,8 @@
   <line x1="635.5" y1="354" x2="635.5" y2="422" fill="none" stroke="#059669" stroke-width="2.6" stroke-linecap="round" />
   <line x1="622.5" y1="376" x2="622.5" y2="444" fill="none" stroke="#7c3aed" stroke-width="2.6" stroke-linecap="round" />
   <line x1="609.5" y1="398" x2="609.5" y2="466" fill="none" stroke="#db2777" stroke-width="2.6" stroke-linecap="round" />
-  <line x1="596.5" y1="420" x2="596.5" y2="562" fill="none" stroke="#0ca678" stroke-width="2.6" stroke-linecap="round" />
-  <line x1="583.5" y1="442" x2="583.5" y2="584" fill="none" stroke="#0ca678" stroke-width="2.6" stroke-linecap="round" />
+  <line x1="596.5" y1="420" x2="596.5" y2="562" fill="none" stroke="#64748b" stroke-width="2.6" stroke-linecap="round" />
+  <line x1="583.5" y1="442" x2="583.5" y2="584" fill="none" stroke="#64748b" stroke-width="2.6" stroke-linecap="round" />
   <line x1="479.5" y1="606" x2="479.5" y2="684" fill="none" stroke="#1d2733" stroke-width="2.6" stroke-linecap="round" />
   <line x1="453.5" y1="244" x2="453.5" y2="702" fill="none" stroke="#e8890c" stroke-width="2.6" stroke-linecap="round" />
   <line x1="479.5" y1="684" x2="479.5" y2="724" fill="none" stroke="#1d2733" stroke-width="2.6" stroke-linecap="round" />
@@ -251,10 +251,10 @@
   <path d="M622.5,444.0 L614.5,444.0 A5.0,5.0 0 0 0 604.5,444.0 L601.5,444.0 A5.0,5.0 0 0 0 591.5,444.0 L588.5,444.0 A5.0,5.0 0 0 0 578.5,444.0 L484.5,444.0 A5.0,5.0 0 0 0 474.5,444.0 L471.5,444.0 A5.0,5.0 0 0 0 461.5,444.0 L458.5,444.0 A5.0,5.0 0 0 0 448.5,444.0 L398.5,444.0" fill="none" stroke="#7c3aed" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M716.5,398.0 L640.5,398.0 A5.0,5.0 0 0 0 630.5,398.0 L627.5,398.0 A5.0,5.0 0 0 0 617.5,398.0 L609.5,398.0" fill="none" stroke="#db2777" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M609.5,466.0 L601.5,466.0 A5.0,5.0 0 0 0 591.5,466.0 L588.5,466.0 A5.0,5.0 0 0 0 578.5,466.0 L484.5,466.0 A5.0,5.0 0 0 0 474.5,466.0 L471.5,466.0 A5.0,5.0 0 0 0 461.5,466.0 L458.5,466.0 A5.0,5.0 0 0 0 448.5,466.0 L398.5,466.0" fill="none" stroke="#db2777" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M716.5,420.0 L640.5,420.0 A5.0,5.0 0 0 0 630.5,420.0 L627.5,420.0 A5.0,5.0 0 0 0 617.5,420.0 L614.5,420.0 A5.0,5.0 0 0 0 604.5,420.0 L596.5,420.0" fill="none" stroke="#0ca678" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M596.5,562.0 L588.5,562.0 A5.0,5.0 0 0 0 578.5,562.0 L523.5,562.0 A5.0,5.0 0 0 0 513.5,562.0 L484.5,562.0 A5.0,5.0 0 0 0 474.5,562.0 L471.5,562.0 A5.0,5.0 0 0 0 461.5,562.0 L458.5,562.0 A5.0,5.0 0 0 0 448.5,562.0 L398.5,562.0" fill="none" stroke="#0ca678" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M716.5,442.0 L627.5,442.0 A5.0,5.0 0 0 0 617.5,442.0 L614.5,442.0 A5.0,5.0 0 0 0 604.5,442.0 L601.5,442.0 A5.0,5.0 0 0 0 591.5,442.0 L583.5,442.0" fill="none" stroke="#0ca678" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M583.5,584.0 L562.5,584.0 A5.0,5.0 0 0 0 552.5,584.0 L523.5,584.0 A5.0,5.0 0 0 0 513.5,584.0 L484.5,584.0 A5.0,5.0 0 0 0 474.5,584.0 L471.5,584.0 A5.0,5.0 0 0 0 461.5,584.0 L458.5,584.0 A5.0,5.0 0 0 0 448.5,584.0 L398.5,584.0" fill="none" stroke="#0ca678" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M716.5,420.0 L640.5,420.0 A5.0,5.0 0 0 0 630.5,420.0 L627.5,420.0 A5.0,5.0 0 0 0 617.5,420.0 L614.5,420.0 A5.0,5.0 0 0 0 604.5,420.0 L596.5,420.0" fill="none" stroke="#64748b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M596.5,562.0 L588.5,562.0 A5.0,5.0 0 0 0 578.5,562.0 L523.5,562.0 A5.0,5.0 0 0 0 513.5,562.0 L484.5,562.0 A5.0,5.0 0 0 0 474.5,562.0 L471.5,562.0 A5.0,5.0 0 0 0 461.5,562.0 L458.5,562.0 A5.0,5.0 0 0 0 448.5,562.0 L398.5,562.0" fill="none" stroke="#64748b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M716.5,442.0 L627.5,442.0 A5.0,5.0 0 0 0 617.5,442.0 L614.5,442.0 A5.0,5.0 0 0 0 604.5,442.0 L601.5,442.0 A5.0,5.0 0 0 0 591.5,442.0 L583.5,442.0" fill="none" stroke="#64748b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M583.5,584.0 L562.5,584.0 A5.0,5.0 0 0 0 552.5,584.0 L523.5,584.0 A5.0,5.0 0 0 0 513.5,584.0 L484.5,584.0 A5.0,5.0 0 0 0 474.5,584.0 L471.5,584.0 A5.0,5.0 0 0 0 461.5,584.0 L458.5,584.0 A5.0,5.0 0 0 0 448.5,584.0 L398.5,584.0" fill="none" stroke="#64748b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M479.5,606.0 L471.5,606.0 A5.0,5.0 0 0 0 461.5,606.0 L458.5,606.0 A5.0,5.0 0 0 0 448.5,606.0 L398.5,606.0" fill="none" stroke="#1d2733" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M716.5,244.0 L679.5,244.0 A5.0,5.0 0 0 0 669.5,244.0 L484.5,244.0 A5.0,5.0 0 0 0 474.5,244.0 L453.5,244.0" fill="none" stroke="#e8890c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M453.5,702.0 L398.5,702.0" fill="none" stroke="#e8890c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -287,12 +287,14 @@
   <text x="572.4" y="928" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#1d2733" text-anchor="start">I2S datos</text>
   <line x1="653.8" y1="924" x2="675.8" y2="924" fill="none" stroke="#d64545" stroke-width="4" stroke-linecap="round" />
   <text x="683.8" y="928" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#1d2733" text-anchor="start">5 V</text>
-  <line x1="725.6" y1="924" x2="747.6" y2="924" fill="none" stroke="#0ca678" stroke-width="4" stroke-linecap="round" />
-  <text x="755.6" y="928" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#1d2733" text-anchor="start">Datos LED</text>
-  <line x1="837" y1="924" x2="859" y2="924" fill="none" stroke="#b7791f" stroke-width="4" stroke-linecap="round" />
-  <text x="867" y="928" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#1d2733" text-anchor="start">I2C SCL</text>
-  <line x1="935.2" y1="924" x2="957.2" y2="924" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" />
-  <text x="965.2" y="928" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#1d2733" text-anchor="start">I2C SDA</text>
+  <line x1="725.6" y1="924" x2="747.6" y2="924" fill="none" stroke="#64748b" stroke-width="4" stroke-linecap="round" />
+  <text x="755.6" y="928" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#1d2733" text-anchor="start">Botones</text>
+  <line x1="823.8" y1="924" x2="845.8" y2="924" fill="none" stroke="#b7791f" stroke-width="4" stroke-linecap="round" />
+  <text x="853.8" y="928" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#1d2733" text-anchor="start">I2C SCL</text>
+  <line x1="922" y1="924" x2="944" y2="924" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" />
+  <text x="952" y="928" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#1d2733" text-anchor="start">I2C SDA</text>
+  <line x1="1020.2" y1="924" x2="1042.2" y2="924" fill="none" stroke="#0ca678" stroke-width="4" stroke-linecap="round" />
+  <text x="1050.2" y="928" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#1d2733" text-anchor="start">Datos LED</text>
   <line x1="110" y1="946" x2="132" y2="946" fill="none" stroke="#4c6ef5" stroke-width="4" stroke-linecap="round" />
   <text x="140" y="950" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#1d2733" text-anchor="start">Control (CS/DC/RST/BL)</text>
   <circle cx="46" cy="982" r="2.5" fill="#0b7285"/>

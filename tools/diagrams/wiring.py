@@ -102,7 +102,7 @@ def wire_kind(board_pin: str, module_pin: str) -> str:
     }
     if pin in table:
         return table[pin]
-    if pin.startswith("BOTON") or pin in ("1", "2", "A", "B"):
+    if pin.startswith(("BOTON", "BOTÓN")) or pin in ("1", "2", "A", "B"):
         return "button"
     return "data"
 
@@ -454,10 +454,56 @@ def render(d: Diagram, path: Path) -> bool:
     return svg.save(path)
 
 
+GUIDES = {
+    "esp32s3-oled": "docs/guides/esp32-wifi.md",
+    "esp32s3-tft": "docs/guides/esp32-wifi.md",
+    "esp32s3-speaker": "docs/guides/speaker.md",
+    "esp32s3-relays": "docs/guides/esp32-wifi.md",
+    "esp32dev": "docs/guides/speaker.md",
+    "arduino-usb-face": "docs/guides/usb-face.md",
+    "raspberry-pi": "docs/guides/raspberry-pi.md",
+}
+
+
+def markdown(d: Diagram, path: Path) -> bool:
+    """Tabla de conexiones en Markdown con el diagrama incrustado."""
+    lines = [
+        f"# Cableado: {d.title}",
+        "",
+        f"{d.subtitle}.",
+        "",
+        f"![{d.title}]({d.slug}.svg)",
+        "",
+        "| Módulo | Pin del módulo | Pin de la placa | Función |",
+        "|---|---|---|---|",
+    ]
+    for m in d.modules:
+        for pin, target in m.pins:
+            lines.append(f"| {m.name} | `{pin}` | `{target}` | {WIRE[wire_kind(target, pin)][1]} |")
+    if d.notes:
+        lines += ["", "Notas:", ""] + [f"- {n}" for n in d.notes]
+    for m in d.modules:
+        if m.note:
+            lines.append(f"- {m.name}: {m.note}.")
+    if d.warning:
+        lines += ["", f"> **{d.warning[0]}.** " + " ".join(d.warning[1])]
+    guide = GUIDES.get(d.slug)
+    if guide:
+        lines += ["", f"Guía paso a paso: [{guide}](../../{guide}). Seguridad: [docs/safety.md](../../docs/safety.md)."]
+    lines += ["", "<!-- Generado por tools/diagrams/wiring.py: no editar a mano. -->", ""]
+    content = "\n".join(lines)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    if path.exists() and path.read_text(encoding="utf-8") == content:
+        return False
+    path.write_text(content, encoding="utf-8", newline="\n")
+    return True
+
+
 def targets() -> dict[str, Callable[[Path], bool]]:
     out: dict[str, Callable[[Path], bool]] = {}
     for d in diagrams():
         out[f"hardware/wiring/{d.slug}.svg"] = (lambda dd: (lambda p: render(dd, p)))(d)
+        out[f"hardware/wiring/{d.slug}.md"] = (lambda dd: (lambda p: markdown(dd, p)))(d)
     return out
 
 

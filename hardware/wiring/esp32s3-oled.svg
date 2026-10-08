@@ -225,8 +225,8 @@
   <line x1="479.5" y1="318" x2="479.5" y2="422" fill="none" stroke="#059669" stroke-width="2.6" stroke-linecap="round" />
   <line x1="466.5" y1="340" x2="466.5" y2="444" fill="none" stroke="#7c3aed" stroke-width="2.6" stroke-linecap="round" />
   <line x1="453.5" y1="362" x2="453.5" y2="466" fill="none" stroke="#db2777" stroke-width="2.6" stroke-linecap="round" />
-  <line x1="440.5" y1="384" x2="440.5" y2="578" fill="none" stroke="#0ca678" stroke-width="2.6" stroke-linecap="round" />
-  <line x1="427.5" y1="406" x2="427.5" y2="600" fill="none" stroke="#0ca678" stroke-width="2.6" stroke-linecap="round" />
+  <line x1="440.5" y1="384" x2="440.5" y2="578" fill="none" stroke="#64748b" stroke-width="2.6" stroke-linecap="round" />
+  <line x1="427.5" y1="406" x2="427.5" y2="600" fill="none" stroke="#64748b" stroke-width="2.6" stroke-linecap="round" />
   <line x1="375.5" y1="622" x2="375.5" y2="648" fill="none" stroke="#1d2733" stroke-width="2.6" stroke-linecap="round" />
   <line x1="349.5" y1="208" x2="349.5" y2="718" fill="none" stroke="#e8890c" stroke-width="2.6" stroke-linecap="round" />
   <line x1="375.5" y1="648" x2="375.5" y2="740" fill="none" stroke="#1d2733" stroke-width="2.6" stroke-linecap="round" />
@@ -255,10 +255,10 @@
   <path d="M466.5,444.0 L458.5,444.0 A5.0,5.0 0 0 0 448.5,444.0 L445.5,444.0 A5.0,5.0 0 0 0 435.5,444.0 L432.5,444.0 A5.0,5.0 0 0 0 422.5,444.0 L406.5,444.0 A5.0,5.0 0 0 0 396.5,444.0 L380.5,444.0 A5.0,5.0 0 0 0 370.5,444.0 L367.5,444.0 A5.0,5.0 0 0 0 357.5,444.0 L354.5,444.0 A5.0,5.0 0 0 0 344.5,444.0 L294.5,444.0" fill="none" stroke="#7c3aed" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M560.5,362.0 L484.5,362.0 A5.0,5.0 0 0 0 474.5,362.0 L471.5,362.0 A5.0,5.0 0 0 0 461.5,362.0 L453.5,362.0" fill="none" stroke="#db2777" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M453.5,466.0 L445.5,466.0 A5.0,5.0 0 0 0 435.5,466.0 L432.5,466.0 A5.0,5.0 0 0 0 422.5,466.0 L406.5,466.0 A5.0,5.0 0 0 0 396.5,466.0 L380.5,466.0 A5.0,5.0 0 0 0 370.5,466.0 L367.5,466.0 A5.0,5.0 0 0 0 357.5,466.0 L354.5,466.0 A5.0,5.0 0 0 0 344.5,466.0 L294.5,466.0" fill="none" stroke="#db2777" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M560.5,384.0 L484.5,384.0 A5.0,5.0 0 0 0 474.5,384.0 L471.5,384.0 A5.0,5.0 0 0 0 461.5,384.0 L458.5,384.0 A5.0,5.0 0 0 0 448.5,384.0 L440.5,384.0" fill="none" stroke="#0ca678" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M440.5,578.0 L432.5,578.0 A5.0,5.0 0 0 0 422.5,578.0 L419.5,578.0 A5.0,5.0 0 0 0 409.5,578.0 L406.5,578.0 A5.0,5.0 0 0 0 396.5,578.0 L380.5,578.0 A5.0,5.0 0 0 0 370.5,578.0 L367.5,578.0 A5.0,5.0 0 0 0 357.5,578.0 L354.5,578.0 A5.0,5.0 0 0 0 344.5,578.0 L294.5,578.0" fill="none" stroke="#0ca678" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M560.5,406.0 L484.5,406.0 A5.0,5.0 0 0 0 474.5,406.0 L471.5,406.0 A5.0,5.0 0 0 0 461.5,406.0 L458.5,406.0 A5.0,5.0 0 0 0 448.5,406.0 L445.5,406.0 A5.0,5.0 0 0 0 435.5,406.0 L427.5,406.0" fill="none" stroke="#0ca678" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M427.5,600.0 L419.5,600.0 A5.0,5.0 0 0 0 409.5,600.0 L406.5,600.0 A5.0,5.0 0 0 0 396.5,600.0 L380.5,600.0 A5.0,5.0 0 0 0 370.5,600.0 L367.5,600.0 A5.0,5.0 0 0 0 357.5,600.0 L354.5,600.0 A5.0,5.0 0 0 0 344.5,600.0 L294.5,600.0" fill="none" stroke="#0ca678" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M560.5,384.0 L484.5,384.0 A5.0,5.0 0 0 0 474.5,384.0 L471.5,384.0 A5.0,5.0 0 0 0 461.5,384.0 L458.5,384.0 A5.0,5.0 0 0 0 448.5,384.0 L440.5,384.0" fill="none" stroke="#64748b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M440.5,578.0 L432.5,578.0 A5.0,5.0 0 0 0 422.5,578.0 L419.5,578.0 A5.0,5.0 0 0 0 409.5,578.0 L406.5,578.0 A5.0,5.0 0 0 0 396.5,578.0 L380.5,578.0 A5.0,5.0 0 0 0 370.5,578.0 L367.5,578.0 A5.0,5.0 0 0 0 357.5,578.0 L354.5,578.0 A5.0,5.0 0 0 0 344.5,578.0 L294.5,578.0" fill="none" stroke="#64748b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M560.5,406.0 L484.5,406.0 A5.0,5.0 0 0 0 474.5,406.0 L471.5,406.0 A5.0,5.0 0 0 0 461.5,406.0 L458.5,406.0 A5.0,5.0 0 0 0 448.5,406.0 L445.5,406.0 A5.0,5.0 0 0 0 435.5,406.0 L427.5,406.0" fill="none" stroke="#64748b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M427.5,600.0 L419.5,600.0 A5.0,5.0 0 0 0 409.5,600.0 L406.5,600.0 A5.0,5.0 0 0 0 396.5,600.0 L380.5,600.0 A5.0,5.0 0 0 0 370.5,600.0 L367.5,600.0 A5.0,5.0 0 0 0 357.5,600.0 L354.5,600.0 A5.0,5.0 0 0 0 344.5,600.0 L294.5,600.0" fill="none" stroke="#64748b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M375.5,622.0 L367.5,622.0 A5.0,5.0 0 0 0 357.5,622.0 L354.5,622.0 A5.0,5.0 0 0 0 344.5,622.0 L294.5,622.0" fill="none" stroke="#1d2733" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M560.5,208.0 L380.5,208.0 A5.0,5.0 0 0 0 370.5,208.0 L349.5,208.0" fill="none" stroke="#e8890c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M349.5,718.0 L294.5,718.0" fill="none" stroke="#e8890c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -289,12 +289,14 @@
   <text x="572.4" y="856" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#1d2733" text-anchor="start">I2S datos</text>
   <line x1="653.8" y1="852" x2="675.8" y2="852" fill="none" stroke="#d64545" stroke-width="4" stroke-linecap="round" />
   <text x="683.8" y="856" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#1d2733" text-anchor="start">5 V</text>
-  <line x1="725.6" y1="852" x2="747.6" y2="852" fill="none" stroke="#0ca678" stroke-width="4" stroke-linecap="round" />
-  <text x="755.6" y="856" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#1d2733" text-anchor="start">Datos LED</text>
-  <line x1="837" y1="852" x2="859" y2="852" fill="none" stroke="#b7791f" stroke-width="4" stroke-linecap="round" />
-  <text x="867" y="856" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#1d2733" text-anchor="start">I2C SCL</text>
-  <line x1="935.2" y1="852" x2="957.2" y2="852" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" />
-  <text x="965.2" y="856" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#1d2733" text-anchor="start">I2C SDA</text>
+  <line x1="725.6" y1="852" x2="747.6" y2="852" fill="none" stroke="#64748b" stroke-width="4" stroke-linecap="round" />
+  <text x="755.6" y="856" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#1d2733" text-anchor="start">Botones</text>
+  <line x1="823.8" y1="852" x2="845.8" y2="852" fill="none" stroke="#b7791f" stroke-width="4" stroke-linecap="round" />
+  <text x="853.8" y="856" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#1d2733" text-anchor="start">I2C SCL</text>
+  <line x1="922" y1="852" x2="944" y2="852" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" />
+  <text x="952" y="856" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#1d2733" text-anchor="start">I2C SDA</text>
+  <line x1="1020.2" y1="852" x2="1042.2" y2="852" fill="none" stroke="#0ca678" stroke-width="4" stroke-linecap="round" />
+  <text x="1050.2" y="856" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#1d2733" text-anchor="start">Datos LED</text>
   <circle cx="46" cy="888" r="2.5" fill="#0b7285"/>
   <text x="56" y="892" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1d2733" text-anchor="start">El INMP441 y la OLED van a 3,3 V; el amplificador y el anillo, a 5 V del USB.</text>
   <circle cx="46" cy="910" r="2.5" fill="#0b7285"/>
